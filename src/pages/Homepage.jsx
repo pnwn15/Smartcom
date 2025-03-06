@@ -1,16 +1,37 @@
 import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Homepage = () => {
-    return (
-        <div className="min-h-screen w-full bg-gray-100 flex flex-col items-center justify-center">
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    };
 
-            {/* Main Content */}
-            <main className="flex-grow flex flex-col justify-center items-center text-center py-16">
-                <h2 className="text-4xl font-bold text-gray-800">Start Building Your Future</h2>
-                <p className="mt-4 text-xl text-gray-600">Your journey to success starts here. Discover more below.</p>
+    return (
+        <div className="min-h-screen">
+            {/* Main Content with Background Image */}
+            <main className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center py-16" style={{ backgroundImage: 'url(/Carou1.png)' }}>
+                <h2 className="text-4xl font-bold text-white">Starter Way</h2>
+                <p className="mt-4 text-xl text-gray-300">มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี</p>
+
+                {/* Image Carousel with Background Images */}
+                <div className="absolute inset-0 w-full h-full z-10">
+                    <Slider {...settings}>
+                        <div className="h-full w-full bg-cover bg-center rounded-lg" style={{ backgroundImage: 'url(/Carou1.png)' }}></div>
+                        <div className="h-full w-full bg-cover bg-center rounded-lg" style={{ backgroundImage: 'url(/Carou2.jpg)' }}></div>
+                        <div className="h-full w-full bg-cover bg-center rounded-lg" style={{ backgroundImage: 'url(/Carou3.png)' }}></div>
+                    </Slider>
+                </div>
 
                 {/* Buttons */}
-                <div className="mt-8">
+                <div className="mt-8 z-20">
                     <button className="bg-blue-600 text-white px-6 py-2 rounded-lg text-xl hover:bg-blue-700 transition duration-300 mr-4">
                         Get Started
                     </button>
@@ -19,13 +40,6 @@ const Homepage = () => {
                     </button>
                 </div>
             </main>
-
-            {/* Footer */}
-            <footer className="w-full bg-blue-600 text-white p-4 mt-8">
-                <div className="max-w-screen-xl mx-auto text-center">
-                    <p>&copy; 2025 My Website. All Rights Reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 };
