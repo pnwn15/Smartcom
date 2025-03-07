@@ -1,47 +1,85 @@
-import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import Carousel from "../components/Carousel";
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { Card, Card1,Card2,Card3 } from "../components/Card";
+import { Position, Position1 } from "../components/Position";
+import Team from "../components/Team";
+
 
 const Homepage = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    };
+    const Item = styled(Paper)(({ theme }) => ({
+        ...theme.typography.body2,
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        borderRadius: 0,  // เอามุมกลมออก
+    }));
 
     return (
-        <div className="min-h-screen">
-            {/* Main Content with Background Image */}
-            <main className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center py-16" style={{ backgroundImage: 'url(/Carou1.png)' }}>
-                <h2 className="text-4xl font-bold text-white">Starter Way</h2>
-                <p className="mt-4 text-xl text-gray-300">มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี</p>
+        <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={0}> {/* ลบ spacing */}
+                <Grid item xs={12}>
+                    <Item>
+                        <div><Carousel /></div>
+                    </Item>
+                </Grid>
+                <Grid item xs={12}>
+                    <Item>
+                        <div className="h-[650px] w-full container mx-auto flex-col">
+                            <Position />
+                            <div className="flex justify-center mt-10">
+                                <h1 className="font-bold text-2xl tracking-wide text-black">
+                                    ประสบการณ์กว่า <span className="text-red-600 text-3xl font-extrabold">30+</span> ปี
+                                </h1>
+                            </div>
+                            <div className="mt-14 flex justify-center">
+                                <Card
+                                    title="ทำไมต้อง"
+                                    subtitle="Smart Com"
+                                    description="ขับเคลื่อนธุรกิจด้วยโซลูซั่นอัจฉลิยะที่ผสมผสานประสิทธิภาพความปลอดภัย เเละนวัตกกรรม 
+                                                 เพื่อความก้าวล้ำที่เหนือกว่าร่วมเป็นพันธมิตรกับเราเพื่อเปลี่ยนธุรกิจของคุณให้ก้าวล้ำหน้าให้ทุกมิติ"
+                                    link="#"
+                                />
+                                <Card1 />
+                            </div>
 
-                {/* Image Carousel with Background Images */}
-                <div className="absolute inset-0 w-full h-full z-10">
-                    <Slider {...settings}>
-                        <div className="h-full w-full bg-cover bg-center rounded-lg" style={{ backgroundImage: 'url(/Carou1.png)' }}></div>
-                        <div className="h-full w-full bg-cover bg-center rounded-lg" style={{ backgroundImage: 'url(/Carou2.jpg)' }}></div>
-                        <div className="h-full w-full bg-cover bg-center rounded-lg" style={{ backgroundImage: 'url(/Carou3.png)' }}></div>
-                    </Slider>
-                </div>
+                        </div>
+                    </Item>
+                </Grid>
+                <Grid item xs={12}>
+                    <Item>
+                        <section class="bg-white dark:bg-gray-900">
+                            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+                                <Team />                               
+                            </div>
+                        </section>
+                    </Item>
+                </Grid>
+                <Grid item xs={12}>
+                    <Item>
+                        <div className="xl:h-[1500px] md:h-[1500px] lg:h-[1500px] h-[1500px] sm:h-[1500px] w-full container mx-auto flex-col">
+                            <Position1 />
+                            <div className="flex justify-center mt-10">
+                                <h1 className="font-bold text-2xl tracking-wide text-black">
+                                    เเก้ปัญหากว่า <span className="text-red-600 text-3xl font-extrabold">100+</span> ปัญหา
+                                </h1>
+                            </div>
+                            <div className="mt-14 gap-3 flex-wrap mb-4 flex justify-center">
+                                <Card2 />
+                                <Card3 />
+                            </div>
 
-                {/* Buttons */}
-                <div className="mt-8 z-20">
-                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg text-xl hover:bg-blue-700 transition duration-300 mr-4">
-                        Get Started
-                    </button>
-                    <button className="bg-gray-500 text-white px-6 py-2 rounded-lg text-xl hover:bg-gray-600 transition duration-300">
-                        Learn More
-                    </button>
-                </div>
-            </main>
-        </div>
+                        </div>
+                    </Item>
+                </Grid>
+            </Grid>
+        </Box>
+
     );
-};
+}
+
+
 
 export default Homepage;
