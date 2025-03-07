@@ -59,7 +59,7 @@ const Homepage = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <Item>
-                        <div className="xl:h-[1500px] md:h-[1500px] lg:h-[1500px] h-[1500px] sm:h-[1500px] w-full container mx-auto flex-col">
+                        <div className="xl:h-[880px] md:h-[1450px] lg:h-[850px] h-[1430px] sm:h-[1430px] w-full container mx-auto flex-col">
                             <Position1 />
                             <div className="flex justify-center mt-10">
                                 <h1 className="font-bold text-2xl tracking-wide text-black">
