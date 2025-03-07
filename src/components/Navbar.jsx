@@ -89,7 +89,7 @@ const Navbar = () => {
                                 <a
                                     href={item.href}
                                     onClick={item.hasDropdown ? (e) => { e.preventDefault(); toggleDropdown(index); } : null} // เปิด/ปิด dropdown เมื่อคลิก
-                                    className={`block py-2 px-3 rounded-sm ${item.isActive ? 'text-white bg-blue-700' : 'text-gray-900'} ${item.isActive ? 'md:bg-transparent md:text-blue-700' : 'md:hover:bg-transparent md:hover:text-blue-700'} md:p-0 md:dark:text-white hover:underline dark:text-white dark:hover:bg-gray-700 dark:hover:text-red-600 md:dark:hover:bg-transparent dark:border-gray-700`}
+                                    className={`block py-2 px-3 border-b-2  ${item.isActive ? 'text-white bg-red-700' : 'text-gray-900'} ${item.isActive ? 'md:bg-transparent md:text-blue-700' : 'md:hover:bg-transparent md:hover:text-blue-700'} md:p-0 md:dark:text-white hover:underline dark:text-white dark:hover:bg-gray-700 dark:hover:text-red-600 md:dark:hover:bg-transparent dark:border-white`}
                                     aria-current={item.isActive ? "page" : undefined}
                                 >
                                     {item.name} {item.logo}
