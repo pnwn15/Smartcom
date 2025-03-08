@@ -22,12 +22,12 @@ const Homepage = () => {
         <Box sx={{ flexGrow: 0 }}>
             <Grid container spacing={0}> {/* ลบ spacing */}
                 <Grid item xs={12}>
-                    <Item>
+                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <div className=""><Carousel /></div>
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
-                    <Item>
+                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <div className="h-[650px] w-full container mx-auto flex-col">
                             <Position />
                             <div className="flex justify-center mt-10">
@@ -40,26 +40,25 @@ const Homepage = () => {
                                     title="ทำไมต้อง"
                                     subtitle="Smart Com"
                                     description="ขับเคลื่อนธุรกิจด้วยโซลูซั่นอัจฉลิยะที่ผสมผสานประสิทธิภาพความปลอดภัย เเละนวัตกกรรม 
-                                                 เพื่อความก้าวล้ำที่เหนือกว่าร่วมเป็นพันธมิตรกับเราเพื่อเปลี่ยนธุรกิจของคุณให้ก้าวล้ำหน้าให้ทุกมิติ"
+                                         เพื่อความก้าวล้ำที่เหนือกว่าร่วมเป็นพันธมิตรกับเราเพื่อเปลี่ยนธุรกิจของคุณให้ก้าวล้ำหน้าให้ทุกมิติ"
                                     link="#"
                                 />
                                 <Card1 />
                             </div>
-
                         </div>
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
-                    <Item>
+                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <section className="bg-white dark:bg-gray-400">
                             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-6">
-                                <Team />                               
+                                <Team />
                             </div>
                         </section>
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
-                    <Item>
+                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <div className="xl:h-[880px] md:h-[1450px] lg:h-[850px] h-[1430px] sm:h-[1430px] w-full container mx-auto flex-col">
                             <Position1 />
                             <div className="flex justify-center mt-10">
@@ -71,19 +70,19 @@ const Homepage = () => {
                                 <Card2 />
                                 <Card3 />
                             </div>
-
                         </div>
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
-                    <Item>
-                        <section className="bg-white dark:bg-gray-400 mb-3">                     
-                                <Refer />
+                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
+                        <section className="bg-white dark:bg-gray-400 mb-3">
+                            <Refer />
                         </section>
                     </Item>
                 </Grid>
             </Grid>
         </Box>
+
 
     );
 }
