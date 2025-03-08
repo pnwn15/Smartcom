@@ -19,7 +19,7 @@ const Homepage = () => {
     }));
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 0 }}>
             <Grid container spacing={0}> {/* ลบ spacing */}
                 <Grid item xs={12}>
                     <Item>

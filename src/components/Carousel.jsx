@@ -77,7 +77,7 @@ const Carousel = () => {
                             <img
                                 src={slide.image}
                                 alt={`Slide ${index + 1}`}
-                                className="block w-full h-full object-cover bg-center" // ใช้ object-cover เพื่อให้ภาพเต็มขนาด
+                                className="block w-full h-screen object-cover bg-center" // ใช้ object-cover เพื่อให้ภาพเต็มขนาด
                             />
                             <div className="absolute tracking-most inset-0 flex gap-8 items-center mx-auto container flex-col justify-center">
                                 <h2 className={slide.fontStyle}>{slide.title}</h2>
