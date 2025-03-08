@@ -3,7 +3,7 @@ import { CaretRightOutlined } from '@ant-design/icons';
 const Carousel = () => {
     const slides = [
         {
-            image: "/promotion.jpg",
+            image: "/Carous1.jpg",
             title: "Smarter Way",
             fontStyle: "text-4xl font-bold text-white",
             title1: "มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี",
@@ -16,7 +16,7 @@ const Carousel = () => {
             buttonStyle1: "bg-white text-red-600 font-bold hover:bg-black",
         },
         {
-            image: "/promotion.jpg",
+            image: "/Carous1.jpg",
             title: "Smarter Way",
             fontStyle: "text-4xl  font-bold text-white",
             title1: "มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี",
@@ -29,7 +29,7 @@ const Carousel = () => {
             buttonStyle1: "bg-white text-red-600 font-bold hover:bg-black",
         },
         {
-            image: "/promotion.jpg",
+            image: "/Carous1.jpg",
             title: "Smarter Way",
             fontStyle: "text-4xl font-bold text-white",
             title1: "มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี",
@@ -62,7 +62,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="relative w-full  sm:h-screen xl:h-[500px] lg:h-[500px] mx-auto mt-10">
+        <div className="relative w-full  sm:h-screen xl:h-full  lg:h-[500px] mx-auto mt-10">
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
                 {/* สไลด์ */}
                 <div
@@ -72,12 +72,12 @@ const Carousel = () => {
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className="w-full xl:h-[500px] h-screen md:h-screen lg:h-[500px] flex-shrink-0 relative"
+                            className="w-full xl:h-[700px] h-screen md:h-screen object-cover bg-center lg:h-[500px] flex-shrink-0 relative"
                         >
                             <img
                                 src={slide.image}
                                 alt={`Slide ${index + 1}`}
-                                className="block w-full h-full sm:h-screen  md:h-screen"
+                                className="block w-full h-full object-cover bg-center" // ใช้ object-cover เพื่อให้ภาพเต็มขนาด
                             />
                             <div className="absolute tracking-most inset-0 flex gap-8 items-center mx-auto container flex-col justify-center">
                                 <h2 className={slide.fontStyle}>{slide.title}</h2>
@@ -90,12 +90,12 @@ const Carousel = () => {
                                     <button className={`ml-4 px-6 py-2 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
                                         {slide.buttonText1}
                                     </button>
-
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
+
             </div>
 
             {/* จุดวงกลมด้านล่าง */}

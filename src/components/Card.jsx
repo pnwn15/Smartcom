@@ -33,7 +33,7 @@ export function Card1() {
 export function Card2() {
     return (
         <div>
-            <a href="#" className="block max-w-xl w-full sm:w-full md:w-[500px] h-auto p-6 bg-white border border-gray-200 shadow-sm">
+            <a href="#" className="block max-w-xl w-full sm:w-full md:w-[500px] h-full p-6 bg-white border border-gray-200 shadow-sm">
                 <div className='flex  '>
                     <h1 className='text-red-600 text-lg font-bold border-b-2'>Smart <span className='text-black font-bold text-lg'>Insight</span></h1>
                 </div>

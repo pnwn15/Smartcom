@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 import { Card, Card1,Card2,Card3 } from "../components/Card";
 import { Position, Position1 } from "../components/Position";
 import Team from "../components/Team";
+import Refer from "../components/Refer";
 
 
 const Homepage = () => {
@@ -22,7 +23,7 @@ const Homepage = () => {
             <Grid container spacing={0}> {/* ลบ spacing */}
                 <Grid item xs={12}>
                     <Item>
-                        <div><Carousel /></div>
+                        <div className=""><Carousel /></div>
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
@@ -34,7 +35,7 @@ const Homepage = () => {
                                     ประสบการณ์กว่า<span className="text-red-600 text-3xl font-extrabold">30+</span> ปี
                                 </h1>
                             </div>
-                            <div className="mt-14 flex justify-center">
+                            <div className="mt-14 absolute flex justify-center left-1/2  w-full -translate-x-1/2 ">
                                 <Card
                                     title="ทำไมต้อง"
                                     subtitle="Smart Com"
@@ -50,8 +51,8 @@ const Homepage = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <Item>
-                        <section class="bg-white dark:bg-gray-900">
-                            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+                        <section className="bg-white dark:bg-gray-400">
+                            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-6">
                                 <Team />                               
                             </div>
                         </section>
@@ -66,12 +67,19 @@ const Homepage = () => {
                                     เเก้ปัญหากว่า <span className="text-red-600 text-3xl font-extrabold">100+</span> ปัญหา
                                 </h1>
                             </div>
-                            <div className="mt-14 gap-3 flex-wrap mb-4 flex justify-center">
+                            <div className="mt-14 left-1/2   w-full -translate-x-1/2 absolute gap-3 flex-wrap mb-4 flex justify-center">
                                 <Card2 />
                                 <Card3 />
                             </div>
 
                         </div>
+                    </Item>
+                </Grid>
+                <Grid item xs={12}>
+                    <Item>
+                        <section className="bg-white dark:bg-gray-400 mb-3">                     
+                                <Refer />
+                        </section>
                     </Item>
                 </Grid>
             </Grid>

@@ -1,9 +1,4 @@
 @import "tailwindcss";
 
 
-* {
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400; /* Replace with the desired numeric weight, like 400 (regular) or 700 (bold) */
-  font-style: normal;
-}
+

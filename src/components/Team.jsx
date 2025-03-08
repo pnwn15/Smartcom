@@ -23,8 +23,16 @@ const Team = () => {
             avatar: 'https://cdn.prod.website-files.com/602a13d5ad7fdadf5eba5c48/62d3c94cada6060a76891929_SEO%20Waymaker%207%20-%20%20Digital%20transformation.jpeg',
         },
     ];
-  return (
-      <div className="grid grid-cols-2 gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    return (
+        <div className='flex flex-col gap-10'>
+            <div className="flex justify-end xl:max-w-6xl md:max-w-4xl sm:max-w-lg">
+                <h1 className="text-red-600 font-bold text-lg">
+                    Smart
+                    <span className="text-black font-bold text-lg">Solution</span>
+                </h1>
+            </div>
+
+      <div className="grid  grid-cols-2 gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
               <div key={index} className="text-center text-gray-500 dark:text-gray-400">
                   <img
@@ -38,7 +46,8 @@ const Team = () => {
                   <p>{member.role}</p>
               </div>
           ))}
-      </div>
+            </div>
+        </div>
   )
 }
 
