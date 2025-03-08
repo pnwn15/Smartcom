@@ -19,9 +19,9 @@ export function Card({ title, subtitle, description }) {
 export function Card1() {
     return (
         <div className=''>
-            <a href="#" className="block max-w-xl w-full sm:w-full md:w-[500px] h-[400px] p-6 bg-white border border-gray-200 shadow-sm">
+            <a href="#" className="block max-w-xl w-full sm:w-full md:w-[500px] h-[400px] p-6  ">
                 <img
-                    src="/camara.png"
+                    src="/pg1.jpg"
                     alt="Image"
                     className="w-full h-full object-cover rounded-lg"
                 />

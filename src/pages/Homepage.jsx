@@ -65,13 +65,17 @@ const Homepage = () => {
                                 <h1 className="font-bold text-2xl tracking-wide text-black">
                                     เเก้ปัญหากว่า <span className="text-red-600 text-3xl font-extrabold">100+</span> ปัญหา
                                 </h1>
+                                
                             </div>
-                            <div className="mt-14 left-1/2   w-full -translate-x-1/2 absolute gap-3 flex-wrap mb-4 flex justify-center">
+                            <div className="mt-14 left-1/2 w-full -translate-x-1/2 absolute gap-3 flex-wrap mb-4 flex justify-center">
                                 <Card2 />
                                 <Card3 />
                             </div>
+                           \
                         </div>
                     </Item>
+
+
                 </Grid>
                 <Grid item xs={12}>
                     <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
