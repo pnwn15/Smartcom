@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DownOutlined, SearchOutlined } from "@ant-design/icons";
+import { DownOutlined, SearchOutlined, MenuOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,25 +58,14 @@ const Navbar = () => {
                     {isLanguageOpen && (
                         <div className="absolute right-0 top-16 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10">
                             <ul className="space-y-2">
-                                <li>
-                                    <a href="#" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">
-                                        English
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">
-                                        ไทย
-                                    </a>
-                                </li>
-                                {/* เพิ่มภาษาอื่น ๆ ที่ต้องการ */}
+                                <li><a href="#" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">English</a></li>
+                                <li><a href="#" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">ไทย</a></li>
                             </ul>
                         </div>
                     )}
-                    <button onClick={toggleMenu} data-collapse-toggle="navbar-sticky" type="button" aria-expanded={isMenuOpen ? "true" : "false"} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:bg-gray-100" aria-controls="navbar-sticky">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
+                    <button onClick={toggleMenu} data-collapse-toggle="navbar-sticky" type="button" aria-expanded={isMenuOpen ? "true" : "false"}
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:bg-gray-100" aria-controls="navbar-sticky">
+                        <MenuOutlined />
                     </button>
                     
                     

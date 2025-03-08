@@ -31,7 +31,7 @@ const Homepage = () => {
                             <Position />
                             <div className="flex justify-center mt-10">
                                 <h1 className="font-bold text-2xl tracking-wide text-black">
-                                    ประสบการณ์กว่าdsadsadsadasd <span className="text-red-600 text-3xl font-extrabold">30+</span> ปี
+                                    ประสบการณ์กว่า<span className="text-red-600 text-3xl font-extrabold">30+</span> ปี
                                 </h1>
                             </div>
                             <div className="mt-14 flex justify-center">
