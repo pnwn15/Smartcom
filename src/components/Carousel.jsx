@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CaretRightOutlined } from '@ant-design/icons';
+
 const Carousel = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 

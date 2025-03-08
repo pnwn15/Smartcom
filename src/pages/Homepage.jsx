@@ -8,24 +8,14 @@ import { Card, Card1,Card2,Card3 } from "../components/Card";
 import { Position, Position1 } from "../components/Position";
 import Team from "../components/Team";
 import Refer from "../components/Refer";
-
+import sildesData from '../Json/slides.json';
 
 const Homepage = () => {
     const [slides, setSlides] = useState([]);
-    
+
     // ดึงข้อมูลจากไฟล์ JSON เมื่อคอมโพเนนต์ทำการโหลด
     useEffect(() => {
-        const fetchSlides = async () => {
-            try {
-                const response = await fetch('/src/Json/slides.json');
-                const data = await response.json();
-                setSlides(data);
-            } catch (error) {
-                console.error("Error fetching slides:", error);
-            }
-        };
-
-        fetchSlides();
+        setSlides(sildesData);
     }, []);
 
     
