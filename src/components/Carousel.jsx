@@ -1,50 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CaretRightOutlined } from '@ant-design/icons';
-const Carousel = () => {
-    const slides = [
-        {
-            image: "/Carous1.jpg",
-            title: "Smarter Way",
-            fontStyle: "text-4xl font-bold text-white",
-            title1: "มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี",
-            fontStyle1: "text-xl font-bold text-white",
-            title2: "เรานำเสนอโซลูซั่นไอทีที่ล้ำสมัยโดยให้ความสำคัญกับการบริการเเละมาตรฐานสากลอย่างไม่อยุดยั้ง",
-            fontStyle2: "text-md w-[350px] font-bold text-white",
-            buttonText: "เพิ่มเติม",
-            buttonStyle: "bg-white text-black font-bold hover:bg-red-600",
-            buttonText1: "ติดต่อเรา",
-            buttonStyle1: "bg-white text-red-600 font-bold hover:bg-black",
-        },
-        {
-            image: "/Carous1.jpg",
-            title: "Smarter Way",
-            fontStyle: "text-4xl  font-bold text-white",
-            title1: "มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี",
-            fontStyle1: "text-xl font-bold text-white",
-            title2: "เรานำเสนอโซลูซั่นไอทีที่ล้ำสมัยโดยให้ความสำคัญกับการบริการเเละมาตรฐานสากลอย่างไม่อยุดยั้ง",
-            fontStyle2: "text-md w-[350px] font-bold text-white",
-            buttonText: "เพิ่มเติม",
-            buttonStyle: "bg-white text-black font-bold hover:bg-red-600",
-            buttonText1: "ติดต่อเรา",
-            buttonStyle1: "bg-white text-red-600 font-bold hover:bg-black",
-        },
-        {
-            image: "/Carous1.jpg",
-            title: "Smarter Way",
-            fontStyle: "text-4xl font-bold text-white",
-            title1: "มุ่งมั่นสู่ความเป็นเลิศ เป็นผู้นำด้านเทคโนโลยี",
-            fontStyle1: "text-xl font-bold text-white",
-            title2: "เรานำเสนอโซลูซั่นไอทีที่ล้ำสมัยโดยให้ความสำคัญกับการบริการเเละมาตรฐานสากลอย่างไม่อยุดยั้ง",
-            fontStyle2: "text-md w-[350px] font-bold text-white",
-            buttonText: "เพิ่มเติม",
-            buttonStyle: "bg-white text-black font-bold hover:bg-red-600",
-            buttonText1: "ติดต่อเรา",
-            buttonStyle1: "bg-white text-red-600 font-bold hover:bg-black",
-        },
-
-
-    ];
-
+const Carousel = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {

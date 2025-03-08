@@ -18,10 +18,31 @@ const Navbar = () => {
     };
 
     const menuItems = [
-        { name: "Solution",  isActive: true, logo: <DownOutlined />, hasDropdown: true, dropdownItems: ["Dropdown Item 1", "Dropdown Item 2", "Dropdown Item 3"] },
-        { name: "Industries", href: "#", logo: <DownOutlined /> },
-        { name: "Insight", href: "/" },
-        { name: "About", href: "#" },
+        {
+            name: "Solution",
+            isActive: true,
+            logo: <DownOutlined />,
+            hasDropdown: true,
+            dropdownItems: [
+                { name: "Solutions", href: "/solution" },
+                { name: "Dropdown Item 2", href: "#item2" },
+                { name: "Dropdown Item 3", href: "#item3" }
+            ],
+            href: "#"
+        },
+        {
+            name: "Industries",
+            href: "#",
+            logo: <DownOutlined />
+        },
+        {
+            name: "Insight",
+            href: "/",
+        },
+        {
+            name: "About",
+            href: "#",
+        },
     ];
 
     return (
@@ -81,12 +102,14 @@ const Navbar = () => {
                                 >
                                     {item.name} {item.logo}
                                 </a>
+
+                                {/* ตรวจสอบว่าเมนูมี dropdown และเปิดหรือปิดอยู่ */}
                                 {item.hasDropdown && openDropdown === index && (
-                                    <ul className="absolute left-0 w-auto 2xl:mt-7  lg:mt-7 xl:mt-7 sm:mt-0 bg-white border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700 z-10">
+                                    <ul className="absolute left-0 w-auto 2xl:mt-7 lg:mt-7 xl:mt-7 sm:mt-0 bg-white border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700 z-10">
                                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                                             <li key={dropdownIndex}>
-                                                <a href="#" className="block px-4 py-2 border-b-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                    {dropdownItem}
+                                                <a href={dropdownItem.href} className="block px-4 py-2 border-b-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                    {dropdownItem.name} {/* แสดงชื่อของ dropdown item */}
                                                 </a>
                                             </li>
                                         ))}

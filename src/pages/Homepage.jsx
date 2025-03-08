@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Carousel from "../components/Carousel";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -11,6 +11,24 @@ import Refer from "../components/Refer";
 
 
 const Homepage = () => {
+    const [slides, setSlides] = useState([]);
+    
+    // ดึงข้อมูลจากไฟล์ JSON เมื่อคอมโพเนนต์ทำการโหลด
+    useEffect(() => {
+        const fetchSlides = async () => {
+            try {
+                const response = await fetch('/src/Json/slides.json');
+                const data = await response.json();
+                setSlides(data);
+            } catch (error) {
+                console.error("Error fetching slides:", error);
+            }
+        };
+
+        fetchSlides();
+    }, []);
+
+    
     const Item = styled(Paper)(({ theme }) => ({
         ...theme.typography.body2,
         textAlign: 'center',
@@ -23,7 +41,7 @@ const Homepage = () => {
             <Grid container spacing={0}> {/* ลบ spacing */}
                 <Grid item xs={12}>
                     <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
-                        <div className=""><Carousel /></div>
+                        <div className=""><Carousel slides={slides} /></div>
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
