@@ -23,12 +23,12 @@ const Navbar = () => {
             isActive: true,
             logo: <DownOutlined />,
             hasDropdown: true,
-            dropdownItems: [
-                { name: "Solutions", href: "/solution" },
-                { name: "Dropdown Item 2", href: "#item2" },
-                { name: "Dropdown Item 3", href: "#item3" }
-            ],
-            href: "#"
+            // dropdownItems: [
+            //     { name: "Solutions", href: "/solution" },
+            //     { name: "Dropdown Item 2", href: "#item2" },
+            //     { name: "Dropdown Item 3", href: "#item3" }
+            // ],
+            href: "/solotion"
         },
         {
             name: "Industries",
