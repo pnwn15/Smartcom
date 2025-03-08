@@ -92,3 +92,41 @@ export function Card3() {
         </div>
     )
 }
+export function Card4() {
+    const cardsData = [
+        {
+            id: 1,
+            image: "/Carous2.jpg",  // เปลี่ยนเป็น URL รูปที่คุณต้องการ
+            title: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชัน",
+            description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
+        },
+        {
+            id: 2,
+            image: "/Carous3.jpg",
+            title: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชัน",
+            description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
+        },
+        {
+            id: 3,
+            image: "/Carous1.jpg",
+            title: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชัน",
+            description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
+        }
+    ];
+    return (
+        <div className="flex lg:flex-row justify-center w-full  flex-col sm:w-full sm:flex-col md:w-full md:flex-col gap-4 p-6 flex-wrap">
+            {cardsData.map((card) => (
+                <div key={card.id} className="bg-white shadow-lg rounded-xl h-auto lg:w-[20%] sm:w-full md:w-full w-full p-1 ">
+                    <img src={card.image} alt={card.title} className="w-full h-70 object-cover mb-4 rounded-xl" />
+                    <div className='p-4 text-black'>
+                        <h3 className="font-bold text-start text-lg mb-2">{card.title}</h3>
+                        <p className='text-start'>{card.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+
+
+    )
+}
