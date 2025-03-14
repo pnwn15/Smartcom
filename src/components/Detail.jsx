@@ -14,7 +14,7 @@ export function Detail() {
     };
   return (
     <div>
-          <div className="flex flex-col md:flex-row bg-slate-800 text-white justify-center items-start border p-4 max-w-2xl mx-auto">
+          <div className="flex flex-col md:flex-row bg-slate-800 text-white justify-center items-start border p-4 max-w-5xl mx-auto">
               <img src="/pg1.jpg" alt="Your Image" className="w-full md:w-1/2 h-auto mb-4 md:mb-0 mr-0 md:mr-4" /> {/* รูปภาพ */}
               <div className="flex flex-col justify-center gap-6 items-start">
                   {/* ใช้ข้อมูลจาก data สำหรับ heading */}
@@ -62,7 +62,7 @@ export function Detail1() {
     };
   return (
     <div>
-          <div className="flex flex-col gap-3 md:flex-row-reverse bg-slate-800 text-white justify-center items-start border p-4 max-w-2xl mx-auto">
+          <div className="flex flex-col gap-3 md:flex-row-reverse bg-slate-800 text-white justify-center items-start border p-4 max-w-5xl mx-auto">
               <img src="/pg1.jpg" alt="Your Image" className="w-full md:w-1/2 h-auto mb-4 md:mb-0 mr-0 md:mr-4" /> {/* รูปภาพ */}
               <div className="flex flex-col justify-center gap-6 items-start">
                   {/* ใช้ข้อมูลจาก data สำหรับ heading */}
@@ -111,7 +111,7 @@ export function Detail2() {
     };
   return (
     <div>
-          <div className="flex flex-col gap-3 md:flex-row-reverse bg-slate-800 text-white justify-center items-start border p-4 max-w-2xl mx-auto">
+          <div className="flex flex-col gap-3 md:flex-row-reverse bg-slate-800 text-white justify-center items-start border p-4 max-w-5xl mx-auto">
               <img src="/pg1.jpg" alt="Your Image" className="w-full md:w-1/2 h-auto mb-4 md:mb-0 mr-0 md:mr-4" /> {/* รูปภาพ */}
               <div className="flex flex-col justify-center gap-6 items-start">
                   {/* ใช้ข้อมูลจาก data สำหรับ heading */}
@@ -161,7 +161,7 @@ export function Detail3() {
     };
   return (
     <div>
-          <div className="flex flex-col md:flex-row  bg-slate-800 text-white justify-center items-start border p-4 max-w-2xl mx-auto">
+          <div className="flex flex-col md:flex-row  bg-slate-800 text-white justify-center items-start border p-4 max-w-5xl mx-auto">
               <img src="/pg1.jpg" alt="Your Image" className="w-full md:w-1/2 h-auto mb-4 md:mb-0 mr-0 md:mr-4" /> {/* รูปภาพ */}
               <div className="flex flex-col justify-center gap-6 items-start">
                   {/* ใช้ข้อมูลจาก data สำหรับ heading */}
