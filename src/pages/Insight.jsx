@@ -50,9 +50,11 @@ function InsightPage() {
             </Grid>
 
             <Grid item xs={12}>
-                <div className="flex flex-col w-full h-full max-w-7xl  items-start">
+                <div className="flex flex-col mx-auto max-w-7xl h-full py-12 items-start">
                     <Blog />
                 </div>
+
+
             </Grid>
 
         </Grid>

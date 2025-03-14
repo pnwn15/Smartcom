@@ -62,13 +62,13 @@ const Carousel = ({ slides }) => {
                     <div
                         key={index}
                         onClick={() => goToSlide(index)}  // เปลี่ยนไปที่สไลด์ที่เลือก
-                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? "bg-blue-500" : "bg-gray-400"}`}
+                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? "bg-red-600" : "bg-white"}`}
                     />
                 ))}
 
                 {/* Arrow icon */}
-                <div className="border rounded-full p-2 flex items-center justify-center" style={{ width: '20px', height: '20px' }}>
-                    <CaretRightOutlined style={{ fontSize: '16px', color: '#000' }} />
+                <div className="border border-white rounded-full p-2 flex items-center justify-center" style={{ width: '20px', height: '20px' }}>
+                    <CaretRightOutlined style={{ fontSize: '16px', color: '#fff' }} />
                 </div>
             </div>
         </div>
@@ -136,13 +136,13 @@ const Carousel1 = ({ slidessolution }) => {
                     <div
                         key={index}
                         onClick={() => goToSlide(index)}  // เปลี่ยนไปที่สไลด์ที่เลือก
-                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? "bg-blue-500" : "bg-gray-400"}`}
+                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? "bg-red-600" : "bg-white"}`}
                     />
                 ))}
 
                 {/* Arrow icon */}
                 <div className="border rounded-full p-2 flex items-center justify-center" style={{ width: '20px', height: '20px' }}>
-                    <CaretRightOutlined style={{ fontSize: '16px', color: '#000' }} />
+                    <CaretRightOutlined style={{ fontSize: '16px', color: '#fff' }} />
                 </div>
             </div>
         </div>

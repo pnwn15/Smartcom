@@ -24,12 +24,12 @@ const Blog = () => {
     };
 
     return (
-        <div className='w-full mx-auto'>
-            <div className="mt-10  flex gap-6 flex-col">
+        <div className='w-full mx-auto '>
+            <div className="mt-10 flex gap-6 flex-col">
                 <div>
                     <h1 className="text-[32px] ml-7 text-black border-b-[2px] border-red-600 inline">ข้อมูลล่าสุด</h1>
                 </div>
-                <div className="flex space-x-4 ml-7 flex-wrap gap-3">
+                <div className="flex space-x-4 ml-7 flex-wrap gap-3 w-full">
                     {buttons.map((button, index) => (
                         <a href={button.link} key={index}>
                             <button
@@ -47,7 +47,7 @@ const Blog = () => {
 
                 {/* แสดงข้อมูลจากปุ่มที่เลือก */}
                 {selectedButton && selectedButton.name !== 'ทั้งหมด' && (
-                    <div className="mt-8 my-5 flex p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                    <div className="mt-8 my-5 flex p-6 bg-white rounded-lg shadow-md border border-gray-200 w-full">
                         <div className="w-1/2 h-full mr-6">
                             <img
                                 src={selectedButton.image}
@@ -55,12 +55,12 @@ const Blog = () => {
                                 className="w-full h-full object-cover rounded-lg"
                             />
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col w-full">
                             <div className="text-xl font-semibold mb-2">{selectedButton.name}</div>
                             <p>{selectedButton.content}</p>
-                            
-                            <div className="flex justify-between">
-                                <div className="flex">
+
+                            <div className="flex justify-between w-full">
+                                <div className="flex w-full">
                                     <div className="w-20 h-20 mr-4">
                                         <img
                                             src={selectedButton.avatar}
@@ -77,10 +77,10 @@ const Blog = () => {
 
                 {/* แสดงข้อมูลทั้งหมดเมื่อเลือก 'ทั้งหมด' */}
                 {selectedButton === null && (
-                    <div className="mt-8 my-5 mx-auto container max-w-5xl">
+                    <div className="mt-8 my-5 mx-auto container max-w-full w-full">
                         <h2 className="text-2xl font-semibold ml-7">บทความทั้งหมด</h2>
                         {buttons.filter(button => button.name !== 'ทั้งหมด').map((button, index) => (
-                            <div key={index} className="mt-4 flex p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                            <div key={index} className="mt-4 flex p-6 bg-white rounded-lg shadow-md border border-gray-200 w-full">
                                 {/* รูปภาพ */}
                                 <div className="w-1/2 h-full mr-6">
                                     <img
@@ -90,13 +90,12 @@ const Blog = () => {
                                     />
                                 </div>
 
-                                {/* ข้อความ */}
-                                <div className="flex flex-col sm:flex-col md:flex-col">
+                                <div className="flex flex-col sm:flex-col md:flex-col w-full">
                                     <div className="text-xl font-semibold mb-2">{button.name}</div>
                                     <p>{button.content}</p>
 
-                                    <div className="flex justify-between">
-                                        <div className="flex">
+                                    <div className="flex justify-between w-full">
+                                        <div className="flex w-full">
                                             {/* Avatar */}
                                             <div className="w-20 h-20 mr-4">
                                                 <img
@@ -111,12 +110,17 @@ const Blog = () => {
                                     </div>
                                 </div>
                             </div>
-
                         ))}
+                        <div className=' justify-center flex items-center mt-3'>
+                            <button className="bg-red-600 text-white px-4 py-2 rounded w-24">
+                                ดูเพิ่มเติม
+                            </button>
+                        </div>
                     </div>
                 )}
             </div>
         </div>
+
     );
 };
 

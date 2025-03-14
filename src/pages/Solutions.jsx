@@ -57,7 +57,7 @@ function Solutions() {
 
             <Grid item xs={12}>
                 <Item className="border-0 ">
-                    <div className="flex flex-col h-auto bg-gray-600 ">
+                    <div className="flex flex-col h-auto bg-gray-100 ">
                         <div className='flex justify-between items-center mx-auto gap-5  text-3xl text-black font-extrabold mt-12'>
                             <h1 className='text-red-600 font-bold'>Smart <span className='text-black font-bold'>Insight</span> </h1>
 
