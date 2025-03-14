@@ -7,7 +7,7 @@ import InsightPage from './pages/Insight';
 
 function App() {
   return (
-    <Router> {/* ใช้ HashRouter เพื่อหลีกเลี่ยงปัญหาของ BrowserRouter */}
+    <Router > {/* ใช้ HashRouter เพื่อหลีกเลี่ยงปัญหาของ BrowserRouter */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
