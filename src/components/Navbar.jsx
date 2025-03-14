@@ -24,7 +24,7 @@ const Navbar = () => {
             logo: <DownOutlined />,
             hasDropdown: true,
             dropdownItems: [
-                { name: "Solution", href: "/solution" },
+                { name: "Solutiondsadadad", href: "/solution" },
                 { name: "Dropdown Item 2", href: "/solution" },
                 { name: "Dropdown Item 3", href: "/solution" }
             ],
