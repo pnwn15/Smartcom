@@ -25,11 +25,11 @@ const Blog = () => {
 
     return (
         <div className='w-full mx-auto'>
-            <div className="mt-10 ml-7 flex gap-6 flex-col">
+            <div className="mt-10  flex gap-6 flex-col">
                 <div>
-                    <h1 className="text-[32px] text-black border-b-[2px] border-red-600 inline">ข้อมูลล่าสุด</h1>
+                    <h1 className="text-[32px] ml-7 text-black border-b-[2px] border-red-600 inline">ข้อมูลล่าสุด</h1>
                 </div>
-                <div className="flex space-x-4  flex-wrap gap-3">
+                <div className="flex space-x-4 ml-7 flex-wrap gap-3">
                     {buttons.map((button, index) => (
                         <a href={button.link} key={index}>
                             <button
@@ -77,10 +77,11 @@ const Blog = () => {
 
                 {/* แสดงข้อมูลทั้งหมดเมื่อเลือก 'ทั้งหมด' */}
                 {selectedButton === null && (
-                    <div className="mt-8 my-5">
-                        <h2 className="text-2xl font-semibold">บทความทั้งหมด</h2>
+                    <div className="mt-8 my-5 mx-auto container max-w-5xl">
+                        <h2 className="text-2xl font-semibold ml-7">บทความทั้งหมด</h2>
                         {buttons.filter(button => button.name !== 'ทั้งหมด').map((button, index) => (
                             <div key={index} className="mt-4 flex p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                                {/* รูปภาพ */}
                                 <div className="w-1/2 h-full mr-6">
                                     <img
                                         src={button.image}
@@ -88,11 +89,15 @@ const Blog = () => {
                                         className="w-full h-full object-cover rounded-lg"
                                     />
                                 </div>
-                                <div className="flex flex-col">
+
+                                {/* ข้อความ */}
+                                <div className="flex flex-col sm:flex-col md:flex-col">
                                     <div className="text-xl font-semibold mb-2">{button.name}</div>
                                     <p>{button.content}</p>
+
                                     <div className="flex justify-between">
                                         <div className="flex">
+                                            {/* Avatar */}
                                             <div className="w-20 h-20 mr-4">
                                                 <img
                                                     src={button.avatar}
@@ -100,11 +105,13 @@ const Blog = () => {
                                                     className="w-full h-full object-cover rounded-full"
                                                 />
                                             </div>
+                                            {/* วันที่ */}
                                             <div className="text-sm text-gray-500 mt-8">วันที่: 14 มีนาคม 2025</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         ))}
                     </div>
                 )}
