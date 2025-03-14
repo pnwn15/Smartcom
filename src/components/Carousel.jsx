@@ -41,10 +41,10 @@ const Carousel = ({ slides }) => {
                                 <h3 className={slide.fontStyle1}>{slide.title1}</h3>
                                 <h3 className={slide.fontStyle2}>{slide.title2}</h3>
                                 <div className="flex gap-4">
-                                    <button className={`ml-4 px-6 py-2 text-black font-bold rounded-full ${slide.buttonStyle}`}>
+                                    <button className={`w-26 h-12 text-black font-bold rounded-full ${slide.buttonStyle}`}>
                                         {slide.buttonText}
                                     </button>
-                                    <button className={`ml-4 px-6 py-2 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
+                                    <button className={`w-26 h-12 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
                                         {slide.buttonText1}
                                     </button>
                                 </div>
