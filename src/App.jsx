@@ -1,8 +1,9 @@
 import './App.css';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // ใช้ HashRouter แทน BrowserRouter
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // ใช้ HashRouter แทน BrowserRouter
 import Homepage from './pages/Homepage';
 import Solutions from './pages/Solutions';
 import Navbar from './components/Navbar';
+import InsightPage from './pages/Insight';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/solution" element={<Solutions />} />
+        <Route path="/insight" element={<InsightPage />} />
       </Routes>
     </Router>
   );

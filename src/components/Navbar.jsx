@@ -37,7 +37,7 @@ const Navbar = () => {
         },
         {
             name: "Insight",
-            href: "/solution",
+            href: "/insight",
         },
         {
             name: "About",
