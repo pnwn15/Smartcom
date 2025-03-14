@@ -32,7 +32,7 @@ const Navbar = () => {
         },
         {
             name: "Industries",
-            href: "page/solution",
+            href: "/industries",
             logo: <DownOutlined />
         },
         {

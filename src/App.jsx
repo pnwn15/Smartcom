@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage';
 import Solutions from './pages/Solutions';
 import Navbar from './components/Navbar';
 import InsightPage from './pages/Insight';
+import Industries from './pages/Industries';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/solution" element={<Solutions />} />
         <Route path="/insight" element={<InsightPage />} />
+        <Route path="/industries" element={<Industries />} />
       </Routes>
     </Router>
   );
