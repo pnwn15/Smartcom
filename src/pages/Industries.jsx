@@ -4,20 +4,15 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Carousel from '../components/Carousel';
 import sildesSolutionData from '../Json/slidessolution.json';
-import { Card5 } from '../components/Card';
-import ButtonList from '../components/Button';
-import Blog from '../components/Blog';
 import Serve from '../components/Serve';
 
 function Industries() {
     const [slidessolution, setSlides1] = useState([]);
-
     // ดึงข้อมูลจากไฟล์ JSON เมื่อคอมโพเนนต์ทำการโหลด
     useEffect(() => {
         setSlides1(sildesSolutionData);
     }, []);
     console.log(slidessolution)
-
 
     const Item = styled(Paper)(({ theme }) => ({
         ...theme.typography.body2,
