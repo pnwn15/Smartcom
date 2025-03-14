@@ -25,11 +25,11 @@ const Blog = () => {
 
     return (
         <div className='w-full mx-auto '>
-            <div className="mt-10 flex gap-6 flex-col">
+            <div className="mt-10 flex justify-center items-center gap-6 flex-col">
                 <div>
-                    <h1 className="text-[32px] ml-7 text-black border-b-[2px] border-red-600 inline">ข้อมูลล่าสุด</h1>
+                    <h1 className="text-[32px]  text-black border-b-[2px] border-red-600 inline">ข้อมูลล่าสุด</h1>
                 </div>
-                <div className="flex space-x-4 ml-7 flex-wrap gap-3 w-full">
+                <div className="flex space-x-4 justify-center items-center  gap-3 w-full flex-wrap">
                     {buttons.map((button, index) => (
                         <a href={button.link} key={index}>
                             <button
@@ -44,6 +44,7 @@ const Blog = () => {
                         </a>
                     ))}
                 </div>
+
 
                 {/* แสดงข้อมูลจากปุ่มที่เลือก */}
                 {selectedButton && selectedButton.name !== 'ทั้งหมด' && (
