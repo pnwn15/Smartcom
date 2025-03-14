@@ -2,11 +2,11 @@ import React from 'react'
 
 function Serve() {
     const cards = [
-        { id: 1, title: 'การเงิน',  image: 'https://via.placeholder.com/300x200' },
-        { id: 2, title: 'สุขภาพ',  image: 'https://via.placeholder.com/300x200' },
-        { id: 3, title: 'ค้าปลีก',  image: 'https://via.placeholder.com/300x200' },
-        { id: 4, title: 'การผลิต',  image: 'https://via.placeholder.com/300x200' },
-        { id: 5, title: 'การเกษตร',  image: 'https://via.placeholder.com/300x200' }
+        { id: 1, title: 'การเงิน',  image: '/pg1.jpg' },
+        { id: 2, title: 'สุขภาพ', image: '/pg1.jpg' },
+        { id: 3, title: 'ค้าปลีก', image: '/pg1.jpg' },
+        { id: 4, title: 'การผลิต', image: '/pg1.jpg' },
+        { id: 5, title: 'การเกษตร', image: '/pg1.jpg' }
     ];
   return (
       <div className='mt-6 py-8'>
