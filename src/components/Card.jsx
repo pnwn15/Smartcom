@@ -130,35 +130,52 @@ export function Card4() {
 
     )
 }
+
 export function Card5() {
     const cardsData = [
         {
             id: 1,
-            image: "/Carous2.jpg",  // เปลี่ยนเป็น URL รูปที่คุณต้องการ
-            title: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชัน",
-            description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
+            image: "/smart.jpg",  // เปลี่ยนเป็น URL รูปที่คุณต้องการ
+            title: "การเก็บธัญพืชด้วยระบบ Smart Silo จากโครงการจังหวัดตาก",
+            description: "Smart Silo สามารถเชื่อมต่อและทำงานร่วมกับระบบ ERP และระบบบริหารจัดการทั้งโรงได้",
+            avatar: "/avatar1.jpg",
+            name: "Admin smartcom",
+            date: "14 March 2024"
         },
         {
             id: 2,
-            image: "/Carous3.jpg",
-            title: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชัน",
-            description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
+            image: "/smart.jpg",
+            title: "การเก็บธัญพืชด้วยระบบ Smart Silo จากโครงการจังหวัดตาก",
+            description: "Smart Silo สามารถเชื่อมต่อและทำงานร่วมกับระบบ ERP และระบบบริหารจัดการทั้งโรงได้",
+            avatar: "/avatar1.jpg",
+            name: "Admin smartcom",
+            date: "14 March 2024"
         },
         {
             id: 3,
-            image: "/Carous1.jpg",
-            title: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชัน",
-            description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
+            image: "/smart.jpg",
+            title: "การเก็บธัญพืชด้วยระบบ Smart Silo จากโครงการจังหวัดตาก",
+            description: "Smart Silo สามารถเชื่อมต่อและทำงานร่วมกับระบบ ERP และระบบบริหารจัดการทั้งโรงได้",
+            avatar: "/avatar1.jpg",
+            name: "Admin smartcom",
+            date: "14 March 2024"
         }
     ];
     return (
         <div className="flex lg:flex-row justify-center w-full  flex-col sm:w-full sm:flex-col md:w-full md:flex-col gap-4 p-6 flex-wrap">
             {cardsData.map((card) => (
-                <div key={card.id} className="bg-white shadow-lg rounded-xl h-auto lg:w-[20%] sm:w-full md:w-full w-full p-1 ">
-                    <img src={card.image} alt={card.title} className="w-full h-70 object-cover mb-4 rounded-xl" />
+                <div key={card.id} className="bg-white shadow-lg rounded-xl h-auto lg:w-[30%] sm:w-full md:w-full w-full ">
+                    <img src={card.image} alt={card.title} className="w-full h-90 object-cover mb-4 rounded-xl" />
                     <div className='p-4 text-black'>
                         <h3 className="font-bold text-start text-lg mb-2">{card.title}</h3>
                         <p className='text-start'>{card.description}</p>
+                        <div className='flex justify-between mt-5'>
+                            <div className='flex '>
+                            <img className='rounded-full w-12' src={card.avatar} alt="" />
+                            <p className='text-start my-auto'>{card.name}</p>
+                            </div>
+                            <p className='text-start my-auto'>{card.date}</p>
+                        </div>
                     </div>
                 </div>
             ))}
