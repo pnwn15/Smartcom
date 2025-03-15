@@ -8,7 +8,7 @@ import Industries from './pages/Industries';
 
 function App() {
   return (
-    <Router > {/* ใช้ HashRouter เพื่อหลีกเลี่ยงปัญหาของ BrowserRouter */}
+    <Router > 
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />

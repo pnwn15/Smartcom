@@ -8,6 +8,7 @@ function Serve() {
         { id: 4, title: 'การผลิต', image: '/pg1.jpg' },
         { id: 5, title: 'การเกษตร', image: '/pg1.jpg' }
     ];
+    
   return (
       <div className='mt-6 py-8'>
           <div className="mt-6 mx-auto container">

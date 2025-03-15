@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 import Carousel from '../components/Carousel';
 import sildesSolutionData from '../Json/slidessolution.json';
 import { Card5 } from '../components/Card';
-import ButtonList from '../components/Button';
 import Blog from '../components/Blog';
 
 function InsightPage() {
