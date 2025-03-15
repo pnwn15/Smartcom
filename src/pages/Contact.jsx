@@ -9,6 +9,7 @@ import { Position, Position1 } from "../components/Position";
 import Team from "../components/Team";
 import Refer from "../components/Refer";
 import sildesData from '../Json/slides.json';
+import FormCard from '../components/Form';
 
 const ContactComponent = () => {
     const [slides, setSlides] = useState([]);
@@ -35,25 +36,15 @@ const ContactComponent = () => {
                     </Item>
                 </Grid>
                 <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
-                  =
-                    </Item>
-                </Grid>
-                <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
-                     
-                    </Item>
-                </Grid>
-                <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
-                       
-                    </Item>
-
-
-                </Grid>
-                <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
-                       
+                    <Item sx={{ margin: 0 }}> 
+                        <div className='flex-col flex mt-16 gap-14'>
+                            <div className="flex flex-col bg-gray-600 text-white justify-center items-center border p-4 max-w-lg mx-auto">
+                                <h2 className="text-xl font-bold text-center">เราเชื่อว่าความร่วมมืออย่างจริงใจ คือเส้นทางสู่ความสำเร็จที่ยั่งยืน</h2>
+                            </div>
+                            <div className='bg-gray-100 w-full h-full py-5'>
+                                <FormCard />
+                            </div>
+                        </div>
                     </Item>
                 </Grid>
             </Grid>
