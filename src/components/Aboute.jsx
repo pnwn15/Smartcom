@@ -29,7 +29,7 @@ function AbouteComponent() {
             {/* ใช้ map() เพื่อวนลูปข้อมูลใน data */}
             {data.map((item, index) => (
                 <div key={index} className="flex items-center flex-wrap justify-center gap-4">
-                    <div className="text-left flex-1">
+                    <div className="text-left mx-5 flex-1">
                         <h1 className="text-red-600 font-bold tracking-wider text-4xl">{data1.title}</h1>
                         <p className="text-xl font-bold max-w-4xl">{item.description}</p>
                     </div>
