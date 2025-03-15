@@ -59,20 +59,22 @@ const Navbar = () => {
                     <img src="/smartcom.png" className="h-12" alt="logo" />
                 </a>
                 <div className="flex md:order-2 mt-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <a href="/contact">
                     <button
                         type="button"
                         className="w-36 bg-white hover:bg-black font-bold rounded-lg text-md px-4 py-2 text-center text-red-600 sm:hidden md:hidden hidden lg:block xl:block 2xl:block"
                     >
                         Contact
                     </button>
-
+                    </a>
+                    <a href="/contact">
                     <button
                         type="button"
                         className="w-12 bg-white hover:bg-black font-bold rounded-lg text-md px-4 py-2 text-center text-red-600 sm:block md:block block lg:hidden xl:hidden 2xl:hidden"
                     >
                         <i className="fas fa-phone text-black"></i>
                     </button>
-
+                    </a>
                     <SearchOutlined className="text-xl ml-2 hover:text-white cursor-pointer" style={{ color: "white" }} />
                     <button
                         type="button"

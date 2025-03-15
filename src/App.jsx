@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import InsightPage from './pages/Insight';
 import Industries from './pages/Industries';
 import Aboute from './pages/About';
+import ContactComponent from './pages/Contact';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/insight" element={<InsightPage />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/about" element={<Aboute />} />
+        <Route path="/contact" element={<ContactComponent />} />
       </Routes>
     </Router>
   );
