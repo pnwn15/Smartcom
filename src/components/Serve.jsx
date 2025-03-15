@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Serve() {
+ function Serve() {
     const cards = [
         { id: 1, title: 'การเงิน',  image: '/pg1.jpg' },
         { id: 2, title: 'สุขภาพ', image: '/pg1.jpg' },
@@ -8,7 +8,7 @@ function Serve() {
         { id: 4, title: 'การผลิต', image: '/pg1.jpg' },
         { id: 5, title: 'การเกษตร', image: '/pg1.jpg' }
     ];
-    
+
   return (
       <div className='mt-6 py-8'>
           <div className="mt-6 mx-auto container">
