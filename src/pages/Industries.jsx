@@ -87,7 +87,7 @@ function Industries() {
             </Grid>
             <Grid item xs={12} sx={{ border: 'none' }}>
                 <Item>
-                    <div className="flex-col flex bg-gray-100 h-auto  mb-14 gap-14">
+                    <div className="flex-col flex bg-gray-100 h-auto   gap-14">
                         <div className='gap-6 mb-6' >
                             <div className="mt-16 flex flex-col gap-4">
                                 <h1 className="text-[32px] text-black">

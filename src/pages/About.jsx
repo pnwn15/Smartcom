@@ -4,10 +4,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Carousel from '../components/Carousel';
 import sildesSolutionData from '../Json/slidessolution.json';
-import { Card5 } from '../components/Card';
-import Blog from '../components/Blog';
-
-function InsightPage() {
+import AbouteComponent from '../components/Aboute';
+function Aboute() {
     const [slidessolution, setSlides1] = useState([]);
 
     // ดึงข้อมูลจากไฟล์ JSON เมื่อคอมโพเนนต์ทำการโหลด
@@ -34,30 +32,17 @@ function InsightPage() {
                 <Item>
                     <div className='flex-col flex mt-16 gap-14'>
                         <div className="flex flex-col bg-gray-600 text-white justify-center items-center border p-4 max-w-lg mx-auto">
-                            <h2 className="text-xl font-bold text-center">สำรวจเทรนส์ล่าสุด ข้อปฎิบัติที่ดีที่สุดในวงการ IT คัดสรรโดยผู้เชี่ยวชาญของเรา</h2>
+                            <h2 className="text-xl font-bold text-center">SmartCom เรามุ่งมั่นที่จะนำเสนอโซลูชันที่ล้ำสมัย เพื่อช่วยให้ลูกค้าของเราประสบความสำเร็จ</h2>
                         </div>
-                        <div className='bg-gray-100 max-w-full h-full'>
-                            <div className='mt-16'>
-                                <h1 className='text-[32px] text-black border-b-[2px] border-red-600 inline'>เรื่องที่น่าสนใจ</h1>
-                            </div>
-                            <div className='flex gap-5'>
-                                <Card5 />
-                            </div>
+                        <div className='bg-white max-w-full h-full'>
+                       <AbouteComponent />
                         </div>
                     </div>
                 </Item>
             </Grid>
             <Grid item xs={12}>
-                <div className="flex flex-col mx-auto max-w-7xl h-full py-12 items-start">
-                    <Blog />
-                </div>
             </Grid>
         </Grid>
-
-
-
-
     )
 }
-
-export default InsightPage
+export default Aboute

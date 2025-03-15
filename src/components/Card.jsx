@@ -171,8 +171,8 @@ export function Card5() {
                         <p className='text-start'>{card.description}</p>
                         <div className='flex justify-between mt-5'>
                             <div className='flex '>
-                            <img className='rounded-full w-12' src={card.avatar} alt="" />
-                            <p className='text-start my-auto'>{card.name}</p>
+                                <img className='rounded-full w-12' src={card.avatar} alt="" />
+                                <p className='text-start my-auto'>{card.name}</p>
                             </div>
                             <p className='text-start my-auto'>{card.date}</p>
                         </div>

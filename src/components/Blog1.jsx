@@ -2,7 +2,7 @@ import React from 'react';
 
 function Cards() {
     const cardData = [
-        { id: 1, head1: 'S', background:'bg-[#E3F2FD]', title: 'Specific', text: '"SPECIFIC" มุ่งเน้นความเป็นเลิศด้านบริการจากผลิตภัณฑ์ บริหารงาน ธนาคารด้านเทคโนโลยี', alignment: 'start' },
+        { id: 1, head1: 'S', background: 'bg-[#E3F2FD]', title: 'Specific', text: '"SPECIFIC" มุ่งเน้นความเป็นเลิศด้านบริการจากผลิตภัณฑ์ บริหารงาน ธนาคารด้านเทคโนโลยี', alignment: 'start' },
         { id: 2, head1: 'M', background: 'bg-[#E8F5E9]', title: 'Specific', text: '"SPECIFIC" มุ่งเน้นความเป็นเลิศด้านบริการจากผลิตภัณฑ์ บริหารงาน ธนาคารด้านเทคโนโลยี', alignment: 'end' },
         { id: 3, head1: 'A', background: 'bg-[#FFF3E0]', title: 'Specific', text: '"SPECIFIC" มุ่งเน้นความเป็นเลิศด้านบริการจากผลิตภัณฑ์ บริหารงาน ธนาคารด้านเทคโนโลยี', alignment: 'start' },
         { id: 4, head1: 'R', background: 'bg-[#F3E5F5]', title: 'Specific', text: '"SPECIFIC" มุ่งเน้นความเป็นเลิศด้านบริการจากผลิตภัณฑ์ บริหารงาน ธนาคารด้านเทคโนโลยี', alignment: 'end' },

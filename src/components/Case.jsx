@@ -31,11 +31,6 @@ function Case() {
                 </div>
             </div>
         </div>
-
-
-
-
-
     )
 }
 

@@ -172,7 +172,6 @@ export function Detail3() {
                   <p className="text-xs font-bold text-left">
                       {data.description}
                   </p>
-
                   {/* ใช้ map เพื่อแสดงบริการใน ul */}
                   <ul className="flex flex-col space-y-3 w-full">
                       {data.services.map((service, index) => (
@@ -182,7 +181,6 @@ export function Detail3() {
                           </li>
                       ))}
                   </ul>
-
                   <button
                       type="button"
                       className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 
@@ -192,9 +190,6 @@ export function Detail3() {
                   </button>
               </div>
           </div>
-
-
-
     </div>
   )
 }

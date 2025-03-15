@@ -9,9 +9,6 @@ function Refer() {
         setTeamMembers(teamMembersData);  // เซ็ตข้อมูลที่ import มาที่ state
     }, []); // โหลดข้อมูลแค่ครั้งเดียวเมื่อ component mount
 
-    // ตั้งค่า interval สำหรับการเลื่อน index เมื่อข้อมูลถูกโหลด
-    // ทำงานเมื่อ teamMembers ถูกโหลดเสร็จ
-
     return (
         <div className="flex flex-col w-full gap-10">
             <div className="flex flex-col justify-center xl:max-w-6xl md:max-w-4xl sm:max-w-lg mx-auto">

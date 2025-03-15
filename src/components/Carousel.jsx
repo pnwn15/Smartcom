@@ -52,7 +52,6 @@ const Carousel = ({ slides }) => {
                         </div>
                     ))}
                 </div>
-
             </div>
 
             {/* จุดวงกลมด้านล่าง */}
