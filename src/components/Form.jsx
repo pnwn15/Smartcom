@@ -29,9 +29,9 @@ const FormCard = () => {
     ];
     return (
         <div className="w-full max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-10">
-            <div className="flex flex-col p-12 lg:flex-row justify-between sm:flex-col">
+            <div className="flex flex-col-reverse p-12 lg:flex-row justify-between sm:flex-col-reverse md:flex-col-reverse ">
                 {/* ที่อยู่ */}
-                <div className="flex gap-9 flex-col">
+                <div className="flex gap-9 flex-col lg:mt-0 sm:mt-10 mt-5">
                     {contactDetails.map((section, index) => (
                         <div key={index} className="text-start space-y-2">
                             <h1 className="text-xl font-extrabold text-red-600">{section.title}</h1>

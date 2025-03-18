@@ -10,6 +10,7 @@ import Team from "../components/Team";
 import Refer from "../components/Refer";
 import sildesData from '../Json/slides.json';
 import FormCard from '../components/Form';
+import Google from '../components/Google';
 
 const ContactComponent = () => {
     const [slides, setSlides] = useState([]);
@@ -42,7 +43,10 @@ const ContactComponent = () => {
                                 <h2 className="text-xl font-bold text-center">เราเชื่อว่าความร่วมมืออย่างจริงใจ คือเส้นทางสู่ความสำเร็จที่ยั่งยืน</h2>
                             </div>
                             <div className='bg-gray-100 w-full h-full py-5'>
-                                <FormCard />
+                                <FormCard />                         
+                            </div>
+                            <div className='bg-white w-full h-full py-5'>
+                                <Google />                         
                             </div>
                         </div>
                     </Item>
