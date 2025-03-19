@@ -54,44 +54,31 @@ const Homepage = () => {
                                 <Card1 />
                             </div>
                         </div>
-                    </Item>
-                </Grid>
-                <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <section className="bg-white dark:bg-gray-400">
                             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-6">
                                 <Team />
                             </div>
                         </section>
-                    </Item>
-                </Grid>
-                <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <div className="xl:h-[880px] md:h-[1450px] lg:h-[850px] h-[1430px] sm:h-[1430px] w-full container mx-auto flex-col">
                             <Position1 />
                             <div className="flex justify-center mt-10">
                                 <h1 className="font-bold text-2xl tracking-wide text-black">
                                     เเก้ปัญหากว่า <span className="text-red-600 text-3xl font-extrabold">100+</span> ปัญหา
                                 </h1>
-                                
+
                             </div>
                             <div className="mt-14 left-1/2 w-full -translate-x-1/2 absolute gap-3 flex-wrap mb-4 flex justify-center">
                                 <Card2 />
                                 <Card3 />
                             </div>
-                           \
+                            
                         </div>
-                    </Item>
-
-
-                </Grid>
-                <Grid item xs={12}>
-                    <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <section className="bg-white dark:bg-gray-400 mb-3">
                             <Refer />
                         </section>
                     </Item>
                 </Grid>
+              
             </Grid>
         </Box>
 

@@ -1,10 +1,33 @@
 import React, { useState } from 'react';
 import { DownOutlined, SearchOutlined, MenuOutlined, HomeOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import { Modal, Input, Button } from 'antd';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null); // สถานะเก็บเมนูที่เปิด dropdown
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+    const [isModalVisible, setIsModalVisible] = useState(false); // สถานะการเปิดปิด modal
+    const [searchQuery, setSearchQuery] = useState(''); // ค่าคำค้นหาจากผู้ใช้
+    const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false); // สถานะเมนูบัญชีผู้ใช้
+    
+    // ฟังก์ชันเปิด dialog
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
 
+    // ฟังก์ชันปิด dialog
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
+    const toggleAccountMenu = () => {
+        setIsAccountMenuOpen(!isAccountMenuOpen);
+    };
+
+    // ฟังก์ชันที่ทำการค้นหา
+    const handleSearch = () => {
+        console.log('Searching for:', searchQuery);
+        // สามารถเพิ่มการค้นหา หรือเชื่อมต่อ API ได้ที่นี่
+    };
     // ฟังก์ชันเพื่อสลับการเปิด/ปิดเมนู
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -25,9 +48,9 @@ const Navbar = () => {
             logo: <DownOutlined />,
             hasDropdown: true,
             dropdownItems: [
-                { name: "Solution", href: "/solution" },
                 { name: "Home", href: "/" },
-                { name: "Dropdown Item 3", href: "/solution" }
+                { name: "Solution", href: "/solution" },
+                { name: "Shop", href: "/shop" }
             ],
             href: "/solution"
         },
@@ -75,7 +98,60 @@ const Navbar = () => {
                             <i className="fas fa-phone text-black"></i>
                         </button>
                     </a>
-                    <SearchOutlined className="text-xl ml-2 hover:text-white cursor-pointer" style={{ color: "white" }} />
+                    <div className="flex items-center">
+                        {/* ไอคอนค้นหาที่จะเปิด dialog */}
+                        <SearchOutlined
+                            className="text-xl ml-2 hover:text-white cursor-pointer"
+                            style={{ color: 'white' }}
+                            onClick={showModal} // เมื่อคลิกจะเปิด dialog
+                        />
+
+                        {/* Dialog สำหรับค้นหา */}
+                        <Modal
+                            title="Search"
+                            visible={isModalVisible} // กำหนดสถานะการแสดงผล dialog
+                            onCancel={handleCancel} // ฟังก์ชันปิด dialog
+                            footer={null} // ไม่มีปุ่ม footer (สามารถกำหนดปุ่มได้เอง)
+                        >
+                            {/* ฟอร์มค้นหาภายใน dialog */}
+                            <div className="flex flex-col">
+                                <Input
+                                    type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)} // เมื่อพิมพ์จะอัพเดทคำค้นหา
+                                    placeholder="Enter search query"
+                                />
+                                <Button
+                                    type="primary"
+                                    className="mt-4"
+                                    onClick={handleSearch} // เมื่อคลิกปุ่มค้นหาจะทำการค้นหา
+                                >
+                                    Search
+                                </Button>
+                            </div>
+                        </Modal>
+                    </div>
+                    {/* เมนูบัญชีผู้ใช้ */}
+                    <div className="flex items-center">
+                        <button
+                            onClick={toggleAccountMenu}
+                            className="flex items-center cursor-pointer justify-center font-bold text-md px-4 py-2 text-center text-white"
+                        >
+                            <i className="fas fa-user"></i> {/* รูปคน */}
+                        </button>
+                        {isAccountMenuOpen && (
+                            <div className="absolute  top-16 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10">
+                                <ul className="space-y-2">
+                                    <li>
+                                        <a href="/login" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="/signup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
                     <button
                         type="button"
                         onClick={toggleLanguage}
@@ -103,7 +179,7 @@ const Navbar = () => {
                                 <a
                                     href={item.href}
                                     onClick={item.hasDropdown ? (e) => { e.preventDefault(); toggleDropdown(index); } : null}
-                                    className={`block py-2 px-3 border-b-2 lg:border-b-0 md:border-b-0 sm:border-b-2 ${item.isActive ? 'text-white bg-red-700' : 'text-gray-900'} ${item.isActive ? 'md:bg-transparent md:text-blue-700' : 'md:hover:bg-transparent md:hover:text-blue-700'} md:p-0 md:dark:text-white hover:underline dark:text-white dark:hover:bg-gray-700 dark:hover:text-red-600 md:dark:hover:bg-transparent dark:border-white`}
+                                    className={`block py-2 px-3 border-b-2 lg:border-b-0 md:border-b-0 sm:border-b-2 ${item.isActive ? 'text-white bg-red-700 ' : 'text-gray-900 '} ${item.isActive ? 'md:bg-transparent md:text-blue-700' : 'md:hover:bg-transparent md:hover:text-blue-700'} md:p-0 md:dark:text-white hover:underline dark:text-white dark:hover:bg-gray-700 dark:hover:text-red-600 md:dark:hover:bg-transparent dark:border-white`}
                                     aria-current={item.isActive ? "page" : undefined}
                                 >
                                     {item.logo1} {item.name} {item.logo}
@@ -111,10 +187,10 @@ const Navbar = () => {
 
                                 {/* ตรวจสอบว่าเมนูมี dropdown และเปิดหรือปิดอยู่ */}
                                 {item.hasDropdown && openDropdown === index && (
-                                    <ul className="absolute left-0 w-auto 2xl:mt-7 lg:mt-7 xl:mt-7 sm:mt-0 bg-white border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700 z-10">
+                                    <ul className="absolute left-0 w-full 2xl:mt-7 lg:mt-7 xl:mt-7 sm:mt-0 bg-white border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700 z-10">
                                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                                             <li key={dropdownIndex}>
-                                                <a href={dropdownItem.href} className="block px-4 py-2 border-b-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                <a href={dropdownItem.href} className="block px-4 py-2 w-full border-b-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                                     {dropdownItem.logo1} {dropdownItem.name} {/* แสดงชื่อของ dropdown item */}
                                                 </a>
                                             </li>
