@@ -4,9 +4,9 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Carousel from '../components/Carousel';
 import sildesSolutionData from '../Json/slidessolution.json';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, } from 'react-router-dom';
+import { ShoppingCartOutlined } from '@ant-design/icons'; // นำเข้าไอคอนจาก Ant Design
 import axios from 'axios';
-
 function Shop() {
     const [slidessolution, setSlides1] = useState([]);
     const [activeTab, setActiveTab] = useState(0);
@@ -70,13 +70,16 @@ function Shop() {
     }) || [];
 
     const addToCart = (product) => {
+        console.log('Product added to cart:', product);
         const updatedCartItems = [...cartItems, product];
-        setCartItems(updatedCartItems);
-        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+        setCartItems(updatedCartItems); // อัปเดต state
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems)); // บันทึกลง localStorage
+        navigate(`/product/${product.id}`, { state: { product } });
     };
 
-    const goToCart = () => {
-        navigate('/cart', { state: { cartItems } });
+    const goToProductDetail = (product) => {
+        console.log('Navigating to product detail:', product);
+        navigate(`/product/${product.id}`, { state: { product } });
     };
 
     const Item = styled(Paper)(({ theme }) => ({
@@ -118,12 +121,14 @@ function Shop() {
                                 <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-2 gap-y-10">
                                     {filteredItems.map((product) => (
                                         <div key={product.id} className="group relative">
+                                            {/* ภาพสินค้า */}
                                             <img
                                                 alt={product.imageAlt}
                                                 src={product.imagesrc || 'https://dummyimage.com/150x150/000/fff'}
-                                                className="aspect-square w-full rounded-md bg-center bg-gray-200 object-contain group-hover:opacity-75 lg:aspect-auto lg:h-80"
+                                                className="aspect-square w-full rounded-md bg-center bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
                                             />
 
+                                            {/* ข้อมูลสินค้า */}
                                             <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black to-transparent rounded-md">
                                                 <h3 className="text-sm text-white">
                                                     <a href={product.href}>
@@ -133,39 +138,42 @@ function Shop() {
                                                 </h3>
                                                 <p className="text-sm font-medium text-white">{product.price}</p>
                                                 <p className="mt-1 text-sm text-gray-300">{product.color}</p>
+                                            </div>
 
-                                                <div className="mt-2 left-4 justify-center items-center flex space-x-4">
-                                                    <button
-                                                        onClick={() => addToCart(product)}
-                                                        className="text-red-600 bg-transparent border border-red-600 hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium"
-                                                    >
-                                                        Buy {product.name}
-                                                    </button>
+                                            {/* ปุ่ม Buy - ปุ่มนี้จะถูกแสดงเมื่อ hover */}
+                                            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <button
+                                                    onClick={() => {
+                                                        console.log('Clicked Buy button');
+                                                        addToCart(product);  // เพิ่มสินค้าไปในตะกร้า
+                                                        goToProductDetail(product);  // นำทางไปที่หน้า ProductDetail พร้อมข้อมูลสินค้า
+                                                    }}
+                                                    className="text-black bg-white border border-black px-6 py-3 rounded-full text-lg font-medium z-10 flex items-center justify-center"
+                                                >
+                                                    <ShoppingCartOutlined className="w-5 text-black" /> {/* ขยายไอคอนให้ใหญ่ขึ้น */}
+                                                </button>
 
-                                                    <button
-                                                        onClick={goToCart}
-                                                        className="fixed bottom-10 right-10 bg-blue-600 text-white px-4 py-2 rounded-full z-10"
-                                                    >
-                                                        Go to Cart ({cartItems.length})
-                                                    </button>
-                                                </div>
+
                                             </div>
                                         </div>
-
                                     ))}
+
+                                    {/* ปุ่ม Go to Cart */}
+                                    <button
+                                        onClick={() => navigate('/cart')} // นำทางไปที่หน้าตะกร้าสินค้า
+                                        className="fixed bottom-10 right-10 bg-blue-600 text-white px-4 py-2 rounded-full z-10"
+                                    >
+                                        Go to Cart ({cartItems.length})
+                                    </button>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </Item>
             </Grid>
 
-            <button
-                onClick={goToCart}
-                className="fixed bottom-10 right-10 bg-blue-600 text-white px-4 py-2 rounded-full z-10"
-            >
-                Go to Cart ({cartItems.length})
-            </button>
+
         </Grid>
     );
 }

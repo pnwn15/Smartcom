@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 export function Card({ title, subtitle, description }) {
     return (
@@ -93,6 +93,8 @@ export function Card3() {
     )
 }
 export function Card4() {
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const [selectedCard, setSelectedCard] = useState(null); // เก็บข้อมูลของการ์ดที่ถูกเลือก
     const cardsData = [
         {
             id: 1,
@@ -113,10 +115,21 @@ export function Card4() {
             description: "ขับเคลื่อนธุรกิจของคุณด้วยโซลูชันอัจฉริยะที่ผสมผสานประสิทธิภาพ ความปลอดภัย"
         }
     ];
+    // ฟังก์ชั่นเพื่อเปิด Dialog และเก็บข้อมูลของการ์ดที่คลิก
+    const openDialog = (card) => {
+        setSelectedCard(card);
+        setIsDialogOpen(true);
+    };
+
+    // ฟังก์ชั่นเพื่อปิด Dialog
+    const closeDialog = () => {
+        setIsDialogOpen(false);
+        setSelectedCard(null);
+    };
     return (
-        <div className="flex lg:flex-row justify-center w-full  flex-col sm:w-full sm:flex-col md:w-full md:flex-col gap-4 p-6 flex-wrap">
+        <div className="flex lg:flex-row justify-center w-full flex-col sm:w-full sm:flex-col md:w-full md:flex-col gap-4 p-6 flex-wrap">
             {cardsData.map((card) => (
-                <div key={card.id} className="bg-white shadow-lg rounded-xl h-auto lg:w-[20%] sm:w-full md:w-full w-full p-1 ">
+                <div key={card.id} className="bg-white shadow-lg rounded-xl h-auto lg:w-[20%] sm:w-full md:w-full w-full p-1 cursor-pointer" onClick={() => openDialog(card)}>
                     <img src={card.image} alt={card.title} className="w-full h-70 object-cover mb-4 rounded-xl" />
                     <div className='p-4 text-black'>
                         <h3 className="font-bold text-start text-lg mb-2">{card.title}</h3>
@@ -124,10 +137,23 @@ export function Card4() {
                     </div>
                 </div>
             ))}
+
+            {/* Dialog */}
+            {isDialogOpen && selectedCard && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-white p-6 rounded-xl max-w-md w-full">
+                        <h3 className="text-2xl font-bold mb-4">{selectedCard.title}</h3>
+                        <img src={selectedCard.image} alt={selectedCard.title} className="w-full h-60 object-cover mb-4 rounded-xl" />
+                        <p>{selectedCard.description}</p>
+                        <div className="mt-4 flex justify-end">
+                            <button onClick={closeDialog} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                                ปิด
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
-
-
-
     )
 }
 

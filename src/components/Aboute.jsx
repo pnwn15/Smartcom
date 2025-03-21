@@ -28,8 +28,8 @@ function AbouteComponent() {
             <div>
             {/* ใช้ map() เพื่อวนลูปข้อมูลใน data */}
             {data.map((item, index) => (
-                <div key={index} className="flex items-center flex-wrap justify-center gap-4">
-                    <div className="text-left mx-5 flex-1">
+                <div key={index} className="flex items-center border border-b-2 shadow-2xl shadow-black rounded-2xl flex-wrap justify-center gap-4">
+                    <div className="text-left mx-5 my-3 flex-1">
                         <h1 className="text-red-600 font-bold tracking-wider text-4xl">{data1.title}</h1>
                         <p className="text-xl font-bold max-w-4xl">{item.description}</p>
                     </div>
@@ -37,7 +37,7 @@ function AbouteComponent() {
                         <img
                             src={item.imageUrl}
                             alt={item.title}
-                            className="w-full h-full  bg-cover object-center"
+                            className="w-full h-full rounded-2xl bg-cover object-center"
                         />
                     </div>
 
@@ -46,7 +46,7 @@ function AbouteComponent() {
             </div>
             {/* ใช้ map() เพื่อวนลูปข้อมูลใน data1 */}
             <div className="">
-                <h1 className='text-red-600 font-bold tracking-wider text-4xl'>พันธกิจและวิสัยทัศน์ของเรา</h1>
+                <h1 className='text-red-600 font-bold tracking-wider text-3xl '>พันธกิจและวิสัยทัศน์ของเรา</h1>
                 {data1.map((item, index) => (
                     <div key={index} className="flex lg:flex-row sm:flex-col items-center flex-col mt-24 justify-center ">
                         {/* รูปซ้าย */}

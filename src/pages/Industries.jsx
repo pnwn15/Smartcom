@@ -8,10 +8,19 @@ import Serve from '../components/Serve';
 import Case from '../components/Case';
 import Blog1 from '../components/Blog1';
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import {  Position1, Position2 } from '../components/Position';
 
 
 function Industries() {
     const [slidessolution, setSlides1] = useState([]);
+
+    const navigate = useNavigate();  // ใช้ useNavigate สำหรับการนำทาง
+
+    // ฟังก์ชันที่ใช้ในการนำทางเมื่อคลิกปุ่ม
+    const handleButtonClick = () => {
+        navigate('/contact');  // กำหนดเส้นทางที่คุณต้องการนำทางไป
+    };
     // ดึงข้อมูลจากไฟล์ JSON เมื่อคอมโพเนนต์ทำการโหลด
     useEffect(() => {
         setSlides1(sildesSolutionData);
@@ -33,6 +42,7 @@ function Industries() {
             </Grid>
             <Grid item xs={12} sx={{ border: 'none' }}>
                 <Item>
+                    <Position2 />
                     <div className='flex-col flex relative mt-16 gap-14'>
                         <div className="flex flex-col bg-gray-600 text-white justify-center items-center border p-4 max-w-lg mx-auto">
                             <h2 className="text-xl font-bold text-center">แต่ละอุตสาหกรรมมีลักษณะเฉพาะตัวการเข้าใจ อุปสรรคถือเป็นกุญแจสู่ความสำเร็จ</h2>
@@ -88,15 +98,22 @@ function Industries() {
             <Grid item xs={12} sx={{ border: 'none' }}>
                 <Item>
                     <div className="flex-col flex bg-gray-100 h-auto   gap-14">
-                        <div className='gap-6 mb-6' >
+                        <div className='space-y-6 mb-6' >
                             <div className="mt-16 flex flex-col gap-4">
                                 <h1 className="text-[32px] text-black">
                                     ไม่พบอุตสาหกรรมของคุณ ไม่มีปัญหา ด้วยความเชี่ยวชาญของเรา <br />
                                     เราสามารถช่วยเหลือคุณได้ เพียงแค่ปรึกษากับเราฟรี
                                 </h1>
                             </div>
-                            <Button className='w-24 h-12 ' variant="contained" sx={{ backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}>
-                                ดูเพิ่มเติม
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    backgroundColor: 'red',
+                                    '&:hover': { backgroundColor: 'darkred' },
+                                }}
+                                onClick={handleButtonClick}  // เพิ่ม onClick ที่จะทำการนำทาง
+                            >
+                                ต้องการปรึกษา
                             </Button>
                         </div>
                     </div>

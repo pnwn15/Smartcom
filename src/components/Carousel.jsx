@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { CaretRightOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const Carousel = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const navigate = useNavigate();
 
+    const handleButtonClick1 = () => {
+        // นำทางไปหน้าแรก (เช่น หน้า Contact หรือ หน้าอื่นๆ ที่คุณต้องการ)
+        navigate('/solution');
+    };
+
+    const handleButtonClick2 = () => {
+        // นำทางไปหน้าที่สอง
+        navigate('/contact');
+    };
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
@@ -41,10 +52,10 @@ const Carousel = ({ slides }) => {
                                 <h3 className={slide.fontStyle1}>{slide.title1}</h3>
                                 <h3 className={slide.fontStyle2}>{slide.title2}</h3>
                                 <div className="flex gap-4">
-                                    <button className={`w-26 h-12 text-black font-bold rounded-full ${slide.buttonStyle}`}>
+                                    <button onClick={handleButtonClick1} className={`w-26 h-12 text-black font-bold rounded-full ${slide.buttonStyle}`}>
                                         {slide.buttonText}
                                     </button>
-                                    <button className={`w-26 h-12 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
+                                    <button onClick={handleButtonClick2} className={`w-26 h-12 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
                                         {slide.buttonText1}
                                     </button>
                                 </div>
@@ -76,7 +87,7 @@ const Carousel = ({ slides }) => {
 
 const Carousel1 = ({ slidessolution }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const navigate = useNavigate();
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slidessolution.length);
     };
@@ -90,7 +101,17 @@ const Carousel1 = ({ slidessolution }) => {
     const goToSlide = (index) => {
         setCurrentIndex(index);
     };
+    
 
+    const handleButtonClick1 = () => {
+        // นำทางไปหน้าแรก (เช่น หน้า Contact หรือ หน้าอื่นๆ ที่คุณต้องการ)
+        navigate('/industries');
+    };
+
+    const handleButtonClick2 = () => {
+        // นำทางไปหน้าที่สอง
+        navigate('/contact');
+    };
     return (
         <div className="relative w-full  sm:h-screen xl:h-full  lg:h-[500px] mx-auto mt-10">
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
@@ -115,11 +136,11 @@ const Carousel1 = ({ slidessolution }) => {
                                 <h3 className={slide.fontStyle2}>{slide.title2}</h3>
                                 <div className="flex gap-4">
                                 
-                                    <button className={`ml-4 px-6 py-2 text-black font-bold rounded-full ${slide.buttonStyle}`}>
+                                    <button onClick={handleButtonClick1} className={`ml-4 px-6 py-2 text-black font-bold rounded-full ${slide.buttonStyle}`}>
                                         {slide.buttonText}
                                         </button>
                                 
-                                    <button className={`ml-4 px-6 py-2 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
+                                    <button onClick={handleButtonClick2} className={`ml-4 px-6 py-2 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
                                         {slide.buttonText1}
                                     </button>
                                 </div>

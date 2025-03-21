@@ -1,6 +1,11 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom';
 function Teamwork() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/contact');
+    };
     const teamMembers = [
         {
             name: 'นายคัจพงษ์ เศรษฐบรมศักดิ์',
@@ -21,7 +26,7 @@ function Teamwork() {
   return (
       <div class="flex flex-col items-center justify-center h-auto">
           <div class="text-center mt-10">
-              <p class="text-4xl mb-4 text-red-600 border-b-2 font-bold">พบกับทีมงานของเรา</p>
+              <p class="text-3xl mb-4 text-red-600 border-b-2 font-bold">พบกับทีมงานของเรา</p>
           </div>
           <div className='flex flex-col text-center'>
               <img src="/user1.jpg" alt="Your Image" class="mx-auto mb-4 w-40 h-40 object-cover" />
@@ -39,6 +44,9 @@ function Teamwork() {
                       <p className="text-lg text-black font-bold">{member.position}</p>
                   </div>
               ))}
+          </div>
+          <div className='mt-10'>
+              <button onClick={handleClick} className='border p-2 text-sm rounded-lg text-white bg-red-600'>ร่วมงานกับเรา</button>
           </div>
       </div>
   )

@@ -28,7 +28,7 @@ function Footer() {
         },
     ];
   return (
-      <footer className="relative bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/Bgfooter.png')" }}>
+      <footer className="relative bg-cover bg-no-repeat bg-center bottom-0 mb-0" style={{ backgroundImage: "url('/bgfoot1.png')" }}>
           <div className="w-full p-4 py-6 lg:py-8">
               <div className="md:flex md:justify-center gap-6">
                   <div className="mb-6 md:mb-0 flex items-center">

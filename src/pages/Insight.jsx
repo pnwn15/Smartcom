@@ -6,6 +6,7 @@ import Carousel from '../components/Carousel';
 import sildesSolutionData from '../Json/slidessolution.json';
 import { Card5 } from '../components/Card';
 import Blog from '../components/Blog';
+import { Position3 } from '../components/Position';
 
 function InsightPage() {
     const [slidessolution, setSlides1] = useState([]);
@@ -24,15 +25,16 @@ function InsightPage() {
         borderRadius: 0,  // เอามุมกลมออก
     }));
     return (
-        <Grid container spacing={0} direction="column">
+        <Grid container spacing={0} direction="column">   
             <Grid item xs={12}>
                 <Item sx={{ margin: 0, border: 'none' }}> {/* เพิ่ม border: 'none' */}
                     <div className=""><Carousel slides={slidessolution} /></div>
                 </Item>
             </Grid>
             <Grid item xs={12} sx={{ border: 'none' }}>
+                <Position3 />
                 <Item>
-                    <div className='flex-col flex mt-16 gap-14'>
+                    <div className='flex-col relative flex mt-16 gap-14'>
                         <div className="flex flex-col bg-gray-600 text-white justify-center items-center border p-4 max-w-lg mx-auto">
                             <h2 className="text-xl font-bold text-center">สำรวจเทรนส์ล่าสุด ข้อปฎิบัติที่ดีที่สุดในวงการ IT คัดสรรโดยผู้เชี่ยวชาญของเรา</h2>
                         </div>

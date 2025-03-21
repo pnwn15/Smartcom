@@ -4,6 +4,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    host: 'localhost', // ใช้ IP ที่ต้องการ
+    port: 5000, // หรือพอร์ตที่คุณต้องการ
+    strictPort: true, // ป้องกันไม่ให้เปลี่ยนพอร์ตหากพอร์ตนี้ถูกใช้
+  },
   base: '/',
   build: {
     outDir: 'dist',

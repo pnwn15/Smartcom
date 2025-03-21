@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 function Case() {
     const cards = [
         { id: 1, title: 'ระยอง', text1: 'การกำจัดการเข้าถึงช่วยเเก้ปัญหาร้านได้อย่างไร', text2: 'Security Solution,Access Control', image: '/pg1.jpg' },
@@ -8,6 +9,12 @@ function Case() {
         { id: 4, title: 'เชียงใหม่', text1: 'การกำจัดการเข้าถึงช่วยเเก้ปัญหาร้านได้อย่างไร', text2: 'Security Solution,Access Control', image: '/pg1.jpg' },
     ];
 
+    const navigate = useNavigate();  // ใช้ useNavigate สำหรับการนำทาง
+
+    // ฟังก์ชันที่ใช้ในการนำทางเมื่อคลิกปุ่ม
+    const handleButtonClick = () => {
+        navigate('/solution');  // กำหนดเส้นทางที่คุณต้องการนำทางไป
+    };
     return (
         <div className='mt-6 py-8'>
             <div className="mt-6 mx-auto container">
@@ -25,7 +32,14 @@ function Case() {
                     ))}
                 </div>
                 <div className='mt-5'>
-                    <Button variant="contained" sx={{ backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}>
+                    <Button
+                        variant="contained"
+                        sx={{
+                            backgroundColor: 'red',
+                            '&:hover': { backgroundColor: 'darkred' },
+                        }}
+                        onClick={handleButtonClick}  // เพิ่ม onClick ที่จะทำการนำทาง
+                    >
                         ดูเพิ่มเติม
                     </Button>
                 </div>

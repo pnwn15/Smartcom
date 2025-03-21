@@ -1,4 +1,5 @@
 import React from 'react';
+import Social from './Social';
 
 
 const Google = () => (
@@ -26,33 +27,11 @@ const Google = () => (
                         </div>
                     </div>
                 </div>
-                {/* logo */}
                 <div className="text-center">
                     <h1 className="text-2xl font-semibold mb-4">Social Media Links</h1>
-                    <div className="flex flex-wrap justify-center space-x-6">
-                        {/* Facebook */}
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-facebook-square text-xl text-blue-600 hover:text-blue-800"></i>
-                        </a>
-
-                        {/* Instagram */}
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-instagram text-xl text-pink-600 hover:text-pink-800"></i>
-                        </a>
-
-                        {/* Line */}
-                        <a href="https://line.me" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-line text-xl text-green-600 hover:text-green-800"></i>
-                        </a>
-
-                        {/* Tel */}
-                        <a href="tel:+1234567890" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-phone-alt text-xl text-gray-800 hover:text-gray-600"></i>
-                        </a>
-                    </div>
+                {/* logo */}
+                    <Social />
                 </div>
-
-
             </div>
         </div>
     </div>

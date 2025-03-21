@@ -51,3 +51,37 @@ export function Position1() {
     </div>
   )
 }
+export function Position2() {
+  return (
+    <div>
+          <div className="flex contain justify-center xl:ml-154 ml-86 xl:mb-14  sm:ml-80 md:ml-158  ">
+              <div className="absolute border-2 w-25 mt-12 rotate-90 border-black">
+                  {/* เนื้อหาภายใน */}
+              </div>
+              <div className="absolute  mt-25 xl:mr-159 xl:w-160 lg:mr-160 lg:w-160 md:w-90 md:mr-90 w-140  mr-140 border-2 border-black">
+                  {/* เนื้อหาภายใน */}
+              </div>
+              <div className="absolute hidden sm:hidden xl:block lg:block md:block xl:mt-114 xl:mr-318 xl:w-178 lg:mr-319 lg:mt-110 lg:w-170 md:mt-186 md:w-322 md:mr-179  w-280 mr-158  mt-165 rotate-90   border-2 border-black">
+                  {/* เนื้อหาภายใน */}
+              </div>
+          </div>
+    </div>
+  )
+}
+export function Position3() {
+  return (
+    <div>
+          <div className="flex contain justify-center xl:ml-154 ml-86 xl:mb-14  sm:ml-80 md:ml-158  ">
+              <div className="absolute border-2 w-25 mt-12 rotate-90 border-black">
+                  {/* เนื้อหาภายใน */}
+              </div>
+              <div className="absolute  mt-25 xl:mr-159 xl:w-160 lg:mr-160 lg:w-160 md:w-90 md:mr-90 w-140  mr-140 border-2 border-black">
+                  {/* เนื้อหาภายใน */}
+              </div>
+              <div className="absolute hidden sm:hidden xl:block lg:block md:block xl:mt-114 xl:mr-318 xl:w-178 lg:mr-319 lg:mt-110 lg:w-170 md:mt-186 md:w-322 md:mr-179  w-280 mr-158  mt-165 rotate-90   border-2 border-black">
+                  {/* เนื้อหาภายใน */}
+              </div>
+          </div>
+    </div>
+  )
+}
