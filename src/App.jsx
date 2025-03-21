@@ -22,7 +22,7 @@ function App() {
     // ซ่อนการแสดง Loading หลังจากโหลดเสร็จ
     const timer = setTimeout(() => {
       setLoading(false); // หยุดแสดง Loading
-    }, 2000); // ทำให้ loading แสดงเป็นเวลา 2 วินาที
+    }, 1000); // ทำให้ loading แสดงเป็นเวลา 2 วินาที
 
     return () => clearTimeout(timer);
   }, []);
