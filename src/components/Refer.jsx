@@ -10,12 +10,12 @@ function Refer() {
     }, []); // โหลดข้อมูลแค่ครั้งเดียวเมื่อ component mount
 
     return (
-        <div className="flex flex-col w-full gap-10">
+        <div className="flex flex-col bg-black w-full border-2 border-b-2  gap-10">
             <div className="flex flex-col justify-center xl:max-w-6xl md:max-w-4xl sm:max-w-lg mx-auto">
-                <h1 className="text-black border-b-2 border-red-600 font-bold text-lg mt-5 text-center">
+                <h1 className="text-white border-b-2 border-red-600 font-bold text-lg mt-5 text-center">
                     References
                 </h1>
-                <h1 className="text-black font-bold text-xs mt-5 text-center">
+                <h1 className="text-white font-bold text-xs mt-5 text-center">
                     ลูกค้าที่ไว้ใจเรา
                 </h1>
             </div>
@@ -25,7 +25,7 @@ function Refer() {
                 {teamMembers.map((member, index) => (
                     <div
                         key={index}
-                        className="text-center text-gray-500 dark:text-gray-400 group w-full px-4 py-4"
+                        className="text-center text-black  group w-full px-4 py-4"
                     >
                         {/* ใช้ group เพื่อให้ effect แสดงเมื่อ hover */}
                         <div className="relative overflow-hidden">

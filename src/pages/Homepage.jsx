@@ -54,7 +54,7 @@ const Homepage = () => {
                                 <Card1 />
                             </div>
                         </div>
-                        <section className="bg-white dark:bg-gray-400">
+                        <section className="bg-black">
                             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-6">
                                 <Team />
                             </div>
@@ -73,7 +73,7 @@ const Homepage = () => {
                             </div>
                             
                         </div>
-                        <section className="bg-white dark:bg-gray-400 mb-3">
+                        <section className=" py-5">
                             <Refer />
                         </section>
                     </Item>

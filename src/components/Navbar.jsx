@@ -103,12 +103,12 @@ const Navbar = () => {
                             </div>
                         </Modal>
                     </div>
-                    <div className="flex items-center">
+                    <div className="relative flex items-center">
                         <button onClick={toggleAccountMenu} className="flex items-center cursor-pointer justify-center font-bold text-md px-4 py-2 text-center text-white">
                             <i className="fas fa-user"></i>
                         </button>
                         {isAccountMenuOpen && (
-                            <div className="absolute top-16 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10">
+                            <div className="absolute top-full sm:-left-20 -left-20 md:-left-30 lg:-left-30  mt-2 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10 w-48">
                                 <ul className="space-y-2">
                                     {isLoggedIn ? (
                                         <>
@@ -138,6 +138,7 @@ const Navbar = () => {
                             </div>
                         )}
                     </div>
+
                     <button type="button" onClick={toggleLanguage} className="flex items-center absolute right-0 top-0 justify-center font-bold text-md px-4 py-2 text-center text-white">
                         <i className="fas fa-globe"></i>
                     </button>

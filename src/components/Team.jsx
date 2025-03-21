@@ -24,11 +24,11 @@ const Team = () => {
         },
     ];
     return (
-        <div className='flex flex-col gap-10'>
-            <div className="flex justify-end xl:max-w-6xl md:max-w-4xl sm:max-w-lg">
-                <h1 className="text-red-600 font-bold text-lg">
+        <div className='flex flex-col  gap-10'>
+            <div className="flex justify-end  xl:max-w-6xl md:max-w-4xl sm:max-w-lg">
+                <h1 className="text-red-600 font-bold border-b-2 border-red-600 text-lg">
                     Smart
-                    <span className="text-black font-bold text-lg">Solution</span>
+                    <span className="text-white font-bold text-lg">Solution</span>
                 </h1>
             </div>
 
