@@ -161,7 +161,7 @@ const Navbar = () => {
                                     {item.name}
                                 </a>
                                 {item.hasDropdown && openDropdown === index && (
-                                    <ul className="absolute left-0 w-full 2xl:mt-7 lg:mt-7 xl:mt-7 sm:mt-0 bg-white border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700 z-10">
+                                    <ul className="absolute left-0 w-[224px] 2xl:mt-7 lg:mt-7 xl:mt-7 sm:mt-0 bg-white border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700 z-10">
                                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                                             <li key={dropdownIndex}>
                                                 <a href={dropdownItem.href} className="block px-4 py-2 w-full border-b-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
