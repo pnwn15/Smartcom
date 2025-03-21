@@ -26,9 +26,11 @@
     "crypto-browserify": "^3.12.1",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.30.0",
     "react-slick": "^0.30.3",
+    "reactstrap": "^9.2.3",
     "slick-carousel": "^1.8.1",
     "stream-browserify": "^3.0.0",
     "tailwindcss": "^4.0.10"

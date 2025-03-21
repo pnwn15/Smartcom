@@ -13,12 +13,23 @@ import ProductDetail from './pages/Cart';
 import Cartss from './pages/Carts';
 import LoginPage from './pages/Login';
 import SignUpPage from './pages/Signup';
-
+import React, { useState, useEffect } from 'react';
+import Loading from './components/Loading';
 function App() {
-    
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // ซ่อนการแสดง Loading หลังจากโหลดเสร็จ
+    const timer = setTimeout(() => {
+      setLoading(false); // หยุดแสดง Loading
+    }, 2000); // ทำให้ loading แสดงเป็นเวลา 2 วินาที
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <Router>
+    <Router>   
+      {loading && <Loading />}
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
