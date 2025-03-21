@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 const Loading = () => {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-50 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="flex items-center space-x-2 flex-col">
                 {/* ใส่โลโก้เป็นภาพ */}
                 <img
@@ -16,8 +17,6 @@ const Loading = () => {
                     src="/pixel.gif" // ใส่ URL ของโลโก้ที่ต้องการ
                     alt="Loading..."
                 />
- 
-                    <span className="text-black flex items-center font-bold text-2xl">กำลังโหลด...</span>
                 </div>
             </div>
         </div>
