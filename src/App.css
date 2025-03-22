@@ -11,7 +11,26 @@
   animation: slide 20s linear infinite;
 }
 
-/* Add this to your CSS file */
+.sticky-carousel {
+    position: sticky;
+    top: 0;  /* You can adjust the top value if you need to add some space from the top of the viewport */
+    z-index: 10; /* Make sure it stays above other elements */
+}
+
+/* สร้าง animation ที่ทำให้ภาพหมุนที่แกน X */
+@keyframes rotateX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+/* ใช้ animation ที่สร้างขึ้นกับภาพ */
+.animate-rotate-x {
+  animation: rotateX 5s infinite linear;
+}
 
 
 * {

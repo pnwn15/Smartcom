@@ -113,8 +113,8 @@ const Carousel1 = ({ slidessolution }) => {
         navigate('/contact');
     };
     return (
-        <div className="relative w-full  sm:h-screen xl:h-full  lg:h-[500px] mx-auto mt-10">
-            <div className="relative overflow-hidden rounded-lg shadow-2xl">
+        <div className="relative w-full sm:h-screen xl:h-full lg:h-[500px] mx-auto mt-10">
+            <div className="relative overflow-hidden rounded-lg shadow-2xl sticky top-0 z-10">
                 {/* สไลด์ */}
                 <div
                     className="flex transition-transform duration-500 ease-in-out"
@@ -135,11 +135,9 @@ const Carousel1 = ({ slidessolution }) => {
                                 <h3 className={slide.fontStyle1}>{slide.title1}</h3>
                                 <h3 className={slide.fontStyle2}>{slide.title2}</h3>
                                 <div className="flex gap-4">
-                                
                                     <button onClick={handleButtonClick1} className={`ml-4 px-6 py-2 text-black font-bold rounded-full ${slide.buttonStyle}`}>
                                         {slide.buttonText}
-                                        </button>
-                                
+                                    </button>
                                     <button onClick={handleButtonClick2} className={`ml-4 px-6 py-2 text-red-600 font-bold rounded-full ${slide.buttonStyle1}`}>
                                         {slide.buttonText1}
                                     </button>
@@ -148,7 +146,6 @@ const Carousel1 = ({ slidessolution }) => {
                         </div>
                     ))}
                 </div>
-
             </div>
 
             {/* จุดวงกลมด้านล่าง */}
@@ -168,6 +165,8 @@ const Carousel1 = ({ slidessolution }) => {
                 </div>
             </div>
         </div>
+
+
     );
 };
 

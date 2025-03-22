@@ -32,7 +32,7 @@ function CookieConsent() {
                         <button onClick={handleAccept} className="ml-2 text-red-600 w-1/2 rounded-md p-3 bg-white border-red-600 border underline">
                             ตั่งค่าคุกกี้
                         </button>
-                        <button onClick={handleAccept} className="ml-2 text-white w-1/2 rounded-md p-3 bg-red-600 underline">
+                    <button  onClick={handleAccept} className="ml-2 text-white w-1/2 rounded-md p-3 bg-red-600 underline">
                             ยอมรับทั้งหมด
                         </button>
                     </div>
