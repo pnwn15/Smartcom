@@ -15,6 +15,7 @@ import LoginPage from './pages/Login';
 import SignUpPage from './pages/Signup';
 import React, { useState, useEffect } from 'react';
 import Loading from './components/Loading';
+import Business from './pages/Business';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/business" element={<Business />} />
         <Route path="/product/:productId" element={<ProductDetail />} /> {/* เส้นทางสำหรับรายละเอียดสินค้า */}
         <Route path="/allcart" element={<Cartss />} /> {/* เส้นทางสำหรับรายละเอียดสินค้า */}
       </Routes>

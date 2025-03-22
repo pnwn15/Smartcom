@@ -45,13 +45,14 @@ const Navbar = () => {
 
     const menuItems = [
         {
-            name: "Solution",
+            name: "Home",
             isActive: true,
             logo1: <HomeOutlined />,
             logo: <DownOutlined />,
             hasDropdown: true,
             dropdownItems: [
                 { name: "Home", href: "/" },
+                { name: "Our business", href: "/business" },
                 { name: "Solution", href: "/solution" },
                 { name: "Shop", href: "/shop" }
             ],
@@ -114,24 +115,13 @@ const Navbar = () => {
                                         <>
                                             <li className="text-gray-900 px-4 py-2">{username}</li>
                                             <li className="text-gray-900 px-4 py-2"><a href='https://scc-vpn.from-sc.com/'>การเข้างาน/ออกงาน</a></li>
-                                            <li>
-                                                <button onClick={handleSignOut} className="block px-4 py-2 text-gray-900 hover:bg-gray-100 w-full text-left">
-                                                    Sign Out
-                                                </button>
-                                            </li>
+                                            <li><button onClick={handleSignOut} className="block px-4 py-2 text-gray-900 hover:bg-gray-100 w-full text-left">Sign Out</button></li>
                                         </>
                                     ) : (
                                         <>
-                                            <li>
-                                                <a href="/login" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">
-                                                    Login
-                                                </a>
+                                            <li><a href="/login" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">Login</a>
                                             </li>
-                                            <li>
-                                                <a href="/signup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">
-                                                    Sign Up
-                                                </a>
-                                            </li>
+                                            <li><a href="/signup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">Sign Up</a></li>
                                         </>
                                     )}
                                 </ul>
