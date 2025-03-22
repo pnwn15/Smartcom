@@ -19,6 +19,7 @@ const Navbar = () => {
     const toggleLanguage = () => setIsLanguageOpen(!isLanguageOpen);
     const toggleDropdown = (index) => setOpenDropdown(openDropdown === index ? null : index);
 
+    
     const handleSignOut = () => {
         localStorage.removeItem('token');
         setIsLoggedIn(false);
@@ -140,11 +141,19 @@ const Navbar = () => {
                             </ul>
                         </div>
                     )}
-                    <button onClick={toggleMenu} data-collapse-toggle="navbar-sticky" type="button" aria-expanded={isMenuOpen ? "true" : "false"} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white lg:hidden xl:hidden hover:bg-gray-100" aria-controls="navbar-sticky">
+                    <button
+                        onClick={toggleMenu}
+                        data-collapse-toggle="navbar-sticky"
+                        type="button"
+                        aria-expanded={isMenuOpen ? "true" : "false"}
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white lg:hidden xl:hidden hover:bg-gray-100"
+                        aria-controls="navbar-sticky"
+                    >
                         <MenuOutlined />
                     </button>
+
                 </div>
-                <div className={`fixed left-0 top-0 w-64 h-full sm:bg-black md:bg-transparent bg-black lg:bg-transparent z-50 transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'sm:-translate-x-full -translate-x-full md:-translate-x-0 lg:-translate-x-0 '} md:static md:flex md:w-auto md:h-auto md:order-1`} id="navbar-sticky">
+                <div className={`fixed left-0 top-0 w-64 h-full sm:bg-black md:bg-transparent bg-black lg:bg-transparent z-50 transition-transform transform ${isMenuOpen ? 'translate-x-0 blur-effect' : 'sm:-translate-x-full -translate-x-full md:-translate-x-0 lg:-translate-x-0'} md:static md:flex md:w-auto md:h-auto md:order-1`} id="navbar-sticky">
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
                         {menuItems.map((item, index) => (
                             <li key={index} className="relative">

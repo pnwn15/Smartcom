@@ -24,6 +24,7 @@
     "buffer": "^6.0.3",
     "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.1",
+    "js-cookie": "^3.0.5",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",

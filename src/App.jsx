@@ -16,6 +16,7 @@ import SignUpPage from './pages/Signup';
 import React, { useState, useEffect } from 'react';
 import Loading from './components/Loading';
 import Business from './pages/Business';
+import CookieConsent from './components/Cookie';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -31,6 +32,7 @@ function App() {
   return (
     <Router>   
       {loading && <Loading />}
+      <CookieConsent />
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
