@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DownOutlined, SearchOutlined, MenuOutlined, HomeOutlined } from "@ant-design/icons";
 import { Modal, Input, Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,14 +13,17 @@ const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState('');
 
+
     const showModal = () => setIsModalVisible(true);
     const handleCancel = () => setIsModalVisible(false);
     const toggleAccountMenu = () => setIsAccountMenuOpen(!isAccountMenuOpen);
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-    const toggleLanguage = () => setIsLanguageOpen(!isLanguageOpen);
     const toggleDropdown = (index) => setOpenDropdown(openDropdown === index ? null : index);
 
-    
+    const toggleLanguage = () => {
+        setIsLanguageOpen(!isLanguageOpen);
+    };
+
     const handleSignOut = () => {
         localStorage.removeItem('token');
         setIsLoggedIn(false);
@@ -54,6 +58,7 @@ const Navbar = () => {
             dropdownItems: [
                 { name: "Home", href: "/" },
                 { name: "Our business", href: "/business" },
+                { name: "Vision", href: "/vision" },
                 { name: "Solution", href: "/solution" },
                 { name: "Shop", href: "/shop" }
             ],
@@ -80,10 +85,10 @@ const Navbar = () => {
     return (
         <nav className="fixed w-full z-20 top-0 start-0   dark:border-gray-600 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/bgnav1.png')" }}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <a href="#" className="flex items-center space-x-3 ">
                     <img
                         src="/smartcom.png"
-                        className="h-12 animate-rotate-x"
+                        className="h-12 "
                         alt="logo"
                     />
                 </a>
@@ -135,17 +140,41 @@ const Navbar = () => {
                         )}
                     </div>
 
-                    <button type="button" onClick={toggleLanguage} className="flex items-center absolute right-0 top-0 justify-center font-bold text-md px-4 py-2 text-center text-white">
-                        <i className="fas fa-globe"></i>
-                    </button>
-                    {isLanguageOpen && (
-                        <div className="absolute right-0 top-16 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10">
-                            <ul className="space-y-2">
-                                <li><a href="#" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">English</a></li>
-                                <li><a href="#" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">ไทย</a></li>
-                            </ul>
-                        </div>
-                    )}
+                    <div>
+                        {/* ปุ่มเปิดเมนูเลือกภาษา */}
+                        <button
+                            type="button"
+                            onClick={toggleLanguage}
+                            className="flex items-center absolute right-0 top-0 justify-center font-bold text-md px-4 py-2 text-center text-white"
+                        >
+                            <i className="fas fa-globe"></i>
+                        </button>
+
+                        {isLanguageOpen && (
+                            <div className="absolute right-0 top-16 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10">
+                                <ul className="space-y-2">
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+
+                                        >
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+
+                                        >
+                                            ไทย
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
                     <button
                         onClick={toggleMenu}
                         data-collapse-toggle="navbar-sticky"

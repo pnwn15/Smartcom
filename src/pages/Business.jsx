@@ -296,12 +296,12 @@ function Business() {
     return (
         <Container maxWidth="xl">
             <Box>
-                <Grid container>
+                <Grid container sx={{ marginTop: '8%', }}>
                     <Grid item xs={12}>
                         <div className='h-full w-full relative'>
                             <img className='h-[327px] w-full object-cover' src={tabContent[selectedTab].imgSrc} alt="carousel" />
                             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white font-bold text-3xl">
-                                <h2 className='text-white bg-black p-4 font-extrabold tracking-wider border border-black rounded-4xl'>{tabContent[selectedTab].text}</h2>
+                                <h2 className='text-white overflow-hidden bg-black text-md p-2 font-extrabold tracking-wider border border-black rounded-4xl'>{tabContent[selectedTab].text}</h2>
                             </div>
                         </div>
                     </Grid>

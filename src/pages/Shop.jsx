@@ -14,7 +14,7 @@ function Shop() {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
     const fileInputRef = useRef(null);
-    const tabs = ["All Products", "Recommended", "Popular", "New Arrivals"];
+    const tabs = ["All product","Fidus", "Lilin", "Ionetworks", "Gatekeeper","Blauberg","Shany","Honeywell","Cambium Networks"];
 
     useEffect(() => {
         setSlides1(sildesSolutionData);
@@ -102,14 +102,14 @@ function Shop() {
                     <div className="bg-white h-full">
                         <div className="mx-auto container max-w-7xl my-auto py-16 sm:px-6 sm:py-24 mt-5 lg:px-8 t">
                             <div className="mb-6">
-                                <nav className="flex lg:space-x-8 space-x-2 items-center text-center flex-wrap justify-center overflow-auto">
+                                <nav className="flex lg:space-x-8 space-x-2 items-center text-center flex-wrap   justify-center overflow-auto">
                                     {tabs.map((tab, index) => (
                                         <button
                                             key={index}
                                             onClick={() => setActiveTab(index)}
-                                            className={`text-sm font-medium ${activeTab === index ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-500 hover:text-gray-700'}`}
+                                            className={`text-sm font-medium ${activeTab === index ? 'text-red-600 border-b-2 p-2 border border-red-600' : 'text-gray-500 hover:text-gray-700'}`}
                                         >
-                                            {tab}
+                                           / {tab}
                                         </button>
                                     ))}
                                 </nav>

@@ -50,6 +50,7 @@ function ProductDetail() {
             price: product.price,
             color: product.color,
             imagesrc: product.imagesrc,
+            imagedetail: product.imagedetail,
             quantity: quantity,
         };
 
@@ -106,6 +107,7 @@ function ProductDetail() {
                                                 className="w-full h-24 object-cover rounded-2xl"
                                             />
                                         </div>
+                                        
                                     ))}
                                 </div>
                             </div>
@@ -164,6 +166,11 @@ function ProductDetail() {
                                     </div>
                                 </div>
                             </div>
+                            
+                        </div>
+                        <div className='flex flex-col mt-4 gap-7 justify-center items-center'>
+                            <h1 className='text-4xl font-extrabold'>Detail</h1>
+                            <img src={product.imagedetail || 'https://dummyimage.com/150x150/000/fff'} alt="" />
                         </div>
                     </div>
                 </Grid>

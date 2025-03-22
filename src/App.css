@@ -18,18 +18,19 @@
 }
 
 /* สร้าง animation ที่ทำให้ภาพหมุนที่แกน X */
-@keyframes rotateX {
+@keyframes rotateY {
   0% {
     transform: rotateX(0deg);
   }
   100% {
-    transform: rotateX(360deg);
+    transform: rotateY(360deg);
   }
 }
 
+
 /* ใช้ animation ที่สร้างขึ้นกับภาพ */
 .animate-rotate-x {
-  animation: rotateX 5s infinite linear;
+  animation: rotateY 10s infinite linear;
 }
 
 

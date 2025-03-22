@@ -7,7 +7,7 @@ const Loading = () => {
             <div className="flex items-center space-x-2 flex-col">
                 {/* ใส่โลโก้เป็นภาพ */}
                 <img
-                    className="w-60 h-30"
+                    className="w-60 h-30 animate-rotate-x"
                     src="/smartcom.png" // ใส่ URL ของโลโก้ที่ต้องการ
                     alt="Loading..."
                 />
