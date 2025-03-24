@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { Modal, Input, Button } from 'antd';
 
-const BottomNav = ({ isLoggedIn, username, handleSignOut }) => {
+const BottomNav = () => {
     // สถานะสำหรับการแสดงโมดอล
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
-
-    const toggleAccountMenu = () => {
-        setIsAccountMenuOpen(!isAccountMenuOpen);
-    };
 
     const navItems = [
         { icon: 'fas fa-home', label: 'Home', href: '/' },
@@ -37,12 +32,12 @@ const BottomNav = ({ isLoggedIn, username, handleSignOut }) => {
 
     return (
         <div className="fixed bottom-0 mx-auto left-0 w-full border-t border lg:hidden md:block sm:block border-gray-300 bg-white shadow-lg">
-            <div className="flex justify-center items-center py-2">
+            <div className="flex justify-center mx-auto items-center py-2">
                 {navItems.map((item, index) => (
                     <button
                         key={index}
                         onClick={item.label === 'Search' ? showModal : null}
-                        className="text-black w-1/2 flex flex-col text-2xl mx-4"
+                        className="text-black w-1/2 flex justify-center items-center flex-col text-2xl mx-4"
                     >
                         {/* ถ้ามี href ให้ทำเป็นลิงก์ */}
                         {item.href ? (
