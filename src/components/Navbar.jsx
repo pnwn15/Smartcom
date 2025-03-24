@@ -108,42 +108,79 @@ const Navbar = () => {
                             <i className="fas fa-phone text-black"></i>
                         </button>
                     </a>
-                    <div className="flex items-center">
-                        <SearchOutlined className="text-xl ml-2 hover:text-white cursor-pointer" style={{ color: 'white' }} onClick={showModal} />
+                    <div className="my-auto sm:hidden hidden lg:block items-center">
+                        {/* ปุ่มค้นหาซ่อนแค่ในหน้าจอ sm และ md */}
+                        <SearchOutlined
+                            className="text-xl ml-2 hover:text-white cursor-pointer sm:hidden md:hidden lg:block xl:block"
+                            style={{ color: 'white' }}
+                            onClick={showModal}
+                        />
                         <Modal title="Search" visible={isModalVisible} onCancel={handleCancel} footer={null}>
                             <div className="flex flex-col">
-                                <Input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Enter search query" />
+                                <Input
+                                    type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    placeholder="Enter search query"
+                                />
                                 <Button type="primary" className="mt-4" onClick={handleSearch}>
                                     Search
                                 </Button>
                             </div>
                         </Modal>
                     </div>
+
                     <div className="relative flex items-center">
-                        <button onClick={toggleAccountMenu} className="flex items-center cursor-pointer justify-center font-bold text-md px-4 py-2 text-center text-white">
+                        {/* ปุ่มเมนูบัญชีผู้ใช้ */}
+                        <button
+                            onClick={toggleAccountMenu}
+                            className="flex items-center cursor-pointer justify-center font-bold text-md px-4 py-2 text-center text-white"
+                        >
                             <i className="fas fa-user"></i>
                         </button>
+
+                        {/* เมนูบัญชีผู้ใช้ */}
                         {isAccountMenuOpen && (
-                            <div className="absolute top-full sm:-left-20 -left-20 md:-left-30 lg:-left-30  mt-2 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10 w-48">
+                            <div className="absolute top-full sm:-left-20 -left-20 md:-left-30 lg:-left-30 mt-2 bg-white border border-gray-200 shadow-lg rounded-lg p-2 z-10 w-48">
                                 <ul className="space-y-2">
                                     {isLoggedIn ? (
                                         <>
                                             <li className="text-gray-900 px-4 py-2">{username}</li>
-                                            <li className="text-gray-900 px-4 py-2"><a href='https://scc-vpn.from-sc.com/'>การเข้างาน/ออกงาน</a></li>
-                                            <li className="text-gray-900 px-4 py-2"><a href='/addproduct'>เพิ่มสินค้า</a></li>
-                                            <li><button onClick={handleSignOut} className="block px-4 py-2 text-gray-900 hover:bg-gray-100 w-full text-left">Sign Out</button></li>
+                                            <li className="text-gray-900 px-4 py-2">
+                                                <a href="https://scc-vpn.from-sc.com/">การเข้างาน/ออกงาน</a>
+                                            </li>
+                                            <li className="text-gray-900 px-4 py-2">
+                                                <a href="/addproduct">เพิ่มสินค้า</a>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    onClick={handleSignOut}
+                                                    className="block px-4 py-2 text-gray-900 hover:bg-gray-100 w-full text-left"
+                                                >
+                                                    Sign Out
+                                                </button>
+                                            </li>
                                         </>
                                     ) : (
                                         <>
-                                            <li><a href="/login" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">Login</a>
+                                            <li>
+                                                <a href="/login" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">
+                                                    Login
+                                                </a>
                                             </li>
-                                            <li><a href="/signup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">Sign Up</a></li>
+                                            <li>
+                                                <a href="/signup" className="block px-4 py-2 text-gray-900 hover:bg-gray-100">
+                                                    Sign Up
+                                                </a>
+                                            </li>
                                         </>
                                     )}
                                 </ul>
                             </div>
                         )}
                     </div>
+
+
 
                     <div>
                         {/* ปุ่มเปิดเมนูเลือกภาษา */}

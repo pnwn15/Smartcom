@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import BottomNav from './components/Navphone.jsx'
 
 
 
@@ -11,7 +12,8 @@ import Footer from './components/Footer.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar />
-      <App />
-      <Footer />
+    <App />
+    <Footer />
+    <BottomNav />
   </StrictMode>,
 )

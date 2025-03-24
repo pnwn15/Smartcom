@@ -159,13 +159,7 @@ function Shop() {
                                         </div>
                                     ))}
 
-                                    {/* ปุ่ม Go to Cart */}
-                                    <button
-                                        onClick={() => navigate('/cart')} // นำทางไปที่หน้าตะกร้าสินค้า
-                                        className="fixed bottom-10 right-10 bg-blue-600 text-white px-4 py-2 rounded-full z-10"
-                                    >
-                                        Go to Cart ({cartItems.length})
-                                    </button>
+                                  
                                 </div>
 
                             </div>
