@@ -7,6 +7,7 @@ import sildesSolutionData from '../Json/slidessolution.json';
 import { useNavigate, } from 'react-router-dom';
 import { ShoppingCartOutlined } from '@ant-design/icons'; // นำเข้าไอคอนจาก Ant Design
 import axios from 'axios';
+
 function Shop() {
     const [slidessolution, setSlides1] = useState([]);
     const [activeTab, setActiveTab] = useState(0);

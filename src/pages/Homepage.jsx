@@ -37,6 +37,7 @@ const Homepage = () => {
                 <Grid item xs={12}>
                     <Item sx={{ margin: 0 }}> {/* เพิ่ม margin 0 ให้กับ Item */}
                         <div className="h-[650px] w-full container mx-auto flex-col">
+                         
                             <Position />
                             <div className="flex justify-center mt-10">
                                 <h1 className="font-bold text-2xl tracking-wide text-black">

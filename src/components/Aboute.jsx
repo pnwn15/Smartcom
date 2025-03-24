@@ -24,7 +24,7 @@ function AbouteComponent() {
     ];
 
     return (
-        <div className="mx-auto container space-y-12 mb-4">
+        <div className="mx-auto container  space-y-12 mb-4">
             <div>
             {/* ใช้ map() เพื่อวนลูปข้อมูลใน data */}
             {data.map((item, index) => (

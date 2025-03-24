@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DownOutlined, SearchOutlined, MenuOutlined, HomeOutlined } from "@ant-design/icons";
 import { Modal, Input, Button } from 'antd';
-import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +59,7 @@ const Navbar = () => {
                 { name: "Our business", href: "/business" },
                 { name: "Vision", href: "/vision" },
                 { name: "Solution", href: "/solution" },
-                { name: "Shop", href: "/shop" }
+                { name: "Shop", href: "/shop" },
             ],
             href: "/solution"
         },
@@ -78,6 +77,11 @@ const Navbar = () => {
         {
             name: "About",
             href: "/about",
+            logo1: <HomeOutlined />,
+        },
+        {
+            name: "Portfolio",
+            href: "/portfolio",
             logo1: <HomeOutlined />,
         },
     ];
@@ -126,6 +130,7 @@ const Navbar = () => {
                                         <>
                                             <li className="text-gray-900 px-4 py-2">{username}</li>
                                             <li className="text-gray-900 px-4 py-2"><a href='https://scc-vpn.from-sc.com/'>การเข้างาน/ออกงาน</a></li>
+                                            <li className="text-gray-900 px-4 py-2"><a href='/addproduct'>เพิ่มสินค้า</a></li>
                                             <li><button onClick={handleSignOut} className="block px-4 py-2 text-gray-900 hover:bg-gray-100 w-full text-left">Sign Out</button></li>
                                         </>
                                     ) : (
