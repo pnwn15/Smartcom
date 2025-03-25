@@ -10,7 +10,7 @@ const BottomNav = () => {
     const navItems = [
         { icon: 'fas fa-home', label: 'Home', href: '/' },
         { icon: 'fas fa-search', label: 'Search' },
-        { icon: 'fas fa-user', label: 'Profile', href: '/login' },
+        { icon: 'fas fa-user', label: 'Profile', href: '/account' },
     ];
 
     // ฟังก์ชันเปิดโมดอล
@@ -31,8 +31,8 @@ const BottomNav = () => {
     };
 
     return (
-        <div className="fixed bottom-0 mx-auto left-0 w-full border-t border lg:hidden md:block sm:block border-gray-300 bg-white shadow-lg">
-            <div className="flex justify-center mx-auto items-center py-2">
+        <div className="fixed bottom-0 h-16 mx-auto  left-0 w-full border-t border lg:hidden md:block sm:block border-gray-300 bg-white shadow-lg">
+            <div className="flex justify-center mx-auto items-center my-4">
                 {navItems.map((item, index) => (
                     <button
                         key={index}

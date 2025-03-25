@@ -20,6 +20,7 @@ import CookieConsent from './components/Cookie';
 import Vision from './pages/Vision';
 import Addproduct from './pages/Addproduct';
 import Portfolio from './pages/Portfolio';
+import AccountPage from './pages/Account';
 
 
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/vision" element={<Vision />} />
         <Route path="/addproduct" element={<Addproduct />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/account" element={< AccountPage/>} />
         <Route path="/product/:productId" element={<ProductDetail />} /> {/* เส้นทางสำหรับรายละเอียดสินค้า */}
         <Route path="/allcart" element={<Cartss />} /> {/* เส้นทางสำหรับรายละเอียดสินค้า */}
       </Routes>
