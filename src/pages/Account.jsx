@@ -46,7 +46,7 @@ function AccountPage() {
                 display='flex'
                 justifyContent='center'
                 alignItems='center'
-                sx={{ minHeight: '80vh' }}
+                sx={{ minHeight: '70vh' }}
             >
                 {/* Profile container */}
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -144,6 +144,7 @@ function AccountPage() {
                                                 </a>                       
                                             </li>
                                         </div>
+                                      
                                 </ul>
                             </>
                         )}
