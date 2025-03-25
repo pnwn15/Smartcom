@@ -65,7 +65,7 @@ function AccountPage() {
                         }}
                     >
                         <img
-                            src="acm1.jpg"  // Replace with your image path
+                            src="cre.png"  // Replace with your image path
                             alt="profile"
                             style={{
                                 width: '100%',
@@ -78,7 +78,7 @@ function AccountPage() {
                     <div className="flex flex-col justify-center">
                         {isLoggedIn ? (
                             <>
-                                <div className="text-gray-900 px-4 py-2 font-semibold text-center text-lg">{username}</div>
+                                <div className="text-gray-900 px-4 py-2 font-semibold text-center text-lg">username: {username}</div>
                                 <p className='text-[12px] tracking-widest text-center'>จัดการผู้ใช้</p>
                                 {/* Menu Items */}
                                 <ul className="space-y-2 mt-2 w-80">
